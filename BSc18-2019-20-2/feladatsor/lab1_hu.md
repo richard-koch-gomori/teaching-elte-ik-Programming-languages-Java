@@ -1,4 +1,4 @@
-Programozási nyelvek (BSc, 18) Java 1. gyakolat
+# Programozási nyelvek (BSc, 18) Java 1. gyakolat
 
 
 ### 1. feladat
@@ -22,6 +22,7 @@ Kiirtam 4 szamot
 
 Javítsa ki a programot!
 
+```java
 class Print {
     public static void main() {
         for( int i = 1; i < 4; i++ ) {
@@ -31,6 +32,7 @@ class Print {
         System.out.println("Kiirtam " + i + " szamot")
     }
 }
+```
 
 ### 3. feladat
 
