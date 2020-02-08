@@ -1,4 +1,4 @@
-# Programozási nyelvek (BSc, 18) Java 1. gyakolat
+# Programozási nyelvek (BSc, 18) Java 1. gyakorlat
 
 
 ### 1. feladat
