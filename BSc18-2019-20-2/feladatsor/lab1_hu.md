@@ -13,12 +13,14 @@ kapja, majd üdvözli a felhasználót!
 
 Az alábbi Java program feladata, hogy kiírja az 1-től 4-ig lévő számok felét.
 
+```
 Az elvárt kimenet:
 0.5
 1.0
 1.5
 2.0
 Kiirtam 4 szamot
+```
 
 Javítsa ki a programot!
 
@@ -44,7 +46,7 @@ hogy megfelelő számú parancssori paramétert adtunk–e át!
 
 ### 4. feladat
 
-Írjuk meg az n faktoriálisát kiszámoló programot.
+Írjuk meg az `n` faktoriálisát kiszámoló programot.
 
 ### 1. gyakorló feladat
 
@@ -52,7 +54,7 @@ Készítsünk programot, amely a parancssori argumentumában megadott
 számról eldönti, hogy tökéletes–e! (A számelméletben tökéletes számnak
 nevezzük azokat a természetes számokat, amelyek megegyeznek az önmaguknál
 kisebb osztóik összegével (vagyis az összes osztóik összege a szám kétszerese).
-Az első négy ilyen szám: 6, 28, 496 és 8128.)
+Az első négy ilyen szám: 6, 28, 496 és 8128).
 
 ### 2. gyakorló feladat
 
