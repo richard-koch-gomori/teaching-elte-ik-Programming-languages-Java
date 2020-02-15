@@ -131,26 +131,25 @@ Sztringeket ilyen típusú értékre a `Long.parseLong(...)` függvénnyel alak�
 
 Írjunk programot, mely kiszámítja egy szám négyzetgyökét a babilóniai módszerrel!
 
-Az $S$ szám négyzetgyökének megállapításához számoljuk ki az alábbi $x_n$ sorozat első
-néhány elemét. A program kérje be az $S$ számot, és kérjen be egy $\epsilon$ pontosságot.
-A számolást addig folytassuk, amíg két egymást követő $x_i$ érték különbsége nagyobb,
-mint $\epsilon$. A sorozat legutolsó kiszámított elemét írjuk ki!
+Az S szám négyzetgyökének megállapításához számoljuk ki az alábbi x(n) sorozat első
+néhány elemét. A program kérje be az S számot, és kérjen be egy `epsilon` pontosságot.
+A számolást addig folytassuk, amíg két egymást követő x(i) érték különbsége nagyobb,
+mint `epsilon`. A sorozat legutolsó kiszámított elemét írjuk ki!
 
-$$x_0 = {S \over 2}$$
-$$x_{n+1} = {1 \over 2} \left( x_n + {S \over x_n}\right)$$
+![](newton.png)
 
 Egy sztringet a `Double.parseDouble(...)` függvénnyel konvertálhatunk `double` típusúvá.
 
 ### 5. gyakorló feladat
 
-Számoljuk ki $\sqrt{2}$ értékét közelítőleg lánctört kiértékelésével.
-$$\sqrt{2} - 1 = {1 \over {2 + {1 \over {2 + {1 \over {2 + \dots}}}}}}$$
+Számoljuk ki sqrt(2) értékét közelítőleg lánctört kiértékelésével.
+![](sqrt2.png)
 
 ### 6. gyakorló feladat
 
 Számoljuk ki $e$ értékét közelítőleg lánctört segítségével!
 
-$$e - 1 = 1 + {1 \over {1 + {1 \over {2 + {1 \over {1 + {1 \over {1 + {1 \over {4 + {1 \over {1 + {1 \over {1 + {1 \over {6 + \dots}}}}}}}}}}}}}}}}$$
+![](e.png)
 
 ### 7. gyakorló feladat
 
