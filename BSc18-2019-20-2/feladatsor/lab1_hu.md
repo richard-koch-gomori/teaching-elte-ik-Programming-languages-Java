@@ -136,20 +136,20 @@ néhány elemét. A program kérje be az S számot, és kérjen be egy `epsilon`
 A számolást addig folytassuk, amíg két egymást követő x(i) érték különbsége nagyobb,
 mint `epsilon`. A sorozat legutolsó kiszámított elemét írjuk ki!
 
-![](newton.png)
+![](img/newton.png | width=50)
 
 Egy sztringet a `Double.parseDouble(...)` függvénnyel konvertálhatunk `double` típusúvá.
 
 ### 5. gyakorló feladat
 
 Számoljuk ki sqrt(2) értékét közelítőleg lánctört kiértékelésével.
-![](sqrt2.png)
+![](img/sqrt2.png | width=50)
 
 ### 6. gyakorló feladat
 
-Számoljuk ki $e$ értékét közelítőleg lánctört segítségével!
+Számoljuk ki e értékét közelítőleg lánctört segítségével!
 
-![](e.png)
+![](img/e.png | width=50)
 
 ### 7. gyakorló feladat
 
