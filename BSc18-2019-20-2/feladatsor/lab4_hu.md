@@ -87,7 +87,7 @@ Egy konstruktor, mely 3 paramétert vár:
 
 `int rowNum` (A mátrix sorainak száma)  
 `int colNum` (A mátrix oszlopainak száma)  
-`Integer[] linearData` (Egy, a mátrix elemeit sorfolytonosan tároló tömb)
+`int[] linearData` (Egy, a mátrix elemeit sorfolytonosan tároló tömb)
 
 Egy `toString()` metódus, mely egyetlen karakterláncba felsorolja a
 mátrix elemeit. A karakterláncban az egy sorban szereplő elemeket a `,`
@@ -184,9 +184,9 @@ Készítsünk főprogramot (Main.java) is, amely teszteli ezen műveleteket!
 
 ### 2. gyakorló feladat
 
-Rajzoljon memóriatérképet (memory map) a következő Java programokhoz
+Rajzoljon memóriatérképet (memory map) a következő Java programhoz
 (Másképp: Rajzolja fel a stack és heap pillanatnyi állapotát következő
-Java programok végrehajtása során).
+Java program végrehajtása során).
 
 ~~~{.java}
 class Foo {
