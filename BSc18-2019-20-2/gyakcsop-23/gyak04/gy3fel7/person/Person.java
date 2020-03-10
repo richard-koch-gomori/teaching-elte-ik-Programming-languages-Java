@@ -6,7 +6,7 @@ package person;
 // primitív típusok: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
 // nem primitív típusok: minden más
 
-// pl int i = 2; itt az int nem primitív, a 2 a stack-en jön létre
+// pl int i = 2; itt az int primitív, a 2 a stack-en jön létre
 // Foo f; itt Foo nem primitív, f csak egy referencia, amivel egy Foo objektumra mutathatunk
 // Foo f = new Foo(); itt Foo nem primitív; a new Foo(); miatt a heap-en létrejön egy Foo objektum, az értékadás miatt pedig annak a memóriacíme az f referenciba kerül
 
@@ -27,7 +27,7 @@ public class Person
         this.lastname = lastname;
         this.occup = occup;
         this.gen = gen;
-        this.birthYear = birthYear; // az int nem primitív, itt az int érték másolódik
+        this.birthYear = birthYear; // az int primitív, itt az int érték másolódik
     }
 
     public String toString()
@@ -45,7 +45,7 @@ public class Person
         // azaz s1 == s2 azt jelenti, h ugyanazon a memóriacímen van-e tárolva s1 és s2
         // nekünk nem erre van szükségünk, hanem arra, hogy karakterenként végignézve ugyanazokat a karaktereket tartalmazza-e a két sztring
 
-        // a birthYear típusa már nem referencia, ezért ezeket a == -vel kell öszehasonlítani (máshogy nem is lehet)
+        // a birthYear típusa már nem referencia, ezért ezeket a == -vel kell öszehasonlítani
         return this.firstname.equals(that.firstname) && this.lastname.equals(that.lastname) && this.occup.equals(that.occup) && this.gen == that.gen && this.birthYear == that.birthYear;
     }
 }

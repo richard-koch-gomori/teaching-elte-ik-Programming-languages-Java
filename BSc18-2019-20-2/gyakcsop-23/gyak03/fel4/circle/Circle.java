@@ -21,7 +21,7 @@ public class Circle
 
     public String toString()
     {
-        return "(" + center.getX() + "," + center.getY() + "), r = " + radius;
+        return "(" + center.x + "," + center.y + "), r = " + radius;
     }
 }
 

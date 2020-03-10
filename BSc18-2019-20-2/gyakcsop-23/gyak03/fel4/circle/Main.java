@@ -7,7 +7,7 @@ public class Main
 {
     public static void main(String[] args)
     {
-        Circle c1 = new Circle(3, 5, 10);
+        Circle c1 = new Circle();
 
         // a user code-nak tudnia kell, hogy a Circle objektum létrehozása után, annak a center adattagját még inicializálni kell
         // így a Circle osztályt könnyű rosszul használni -> megoldás: legyen Circle-nek konstruktora, és a konstruktor végezze a szükséges inicializálásokat (ld fel5)
