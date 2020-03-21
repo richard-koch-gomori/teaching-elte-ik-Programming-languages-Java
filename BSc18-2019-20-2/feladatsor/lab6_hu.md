@@ -257,6 +257,44 @@ visszatérési értékeiről, a dobott kivételekről. Generáljon HTML fájlt a
 
 ## 3. gyakorló feladat
 
+Készítse el az előadáson már előforduló `Time` osztályt teszőlegesen választható
+időreprezentációval. Kezelje le az előfoduló kivételeket és legyen egy metódusa,
+ami `String`-ként visszaadja az időt.
 
+Készítsen egy `Pizza` osztály, amelynek legyen az összes mezője `private` és `final`;
+egy mezője az átmérő (`double`), egy a feltétek listája (`String[]`), egy az
+elkészítési idő (`Time`) és egy a szállítási idő (`Time`). Írjon hozzá konstruktort,
+amely a feltétek szerint kiszámolja, hogy mennyi az elkészítési idő, tehát az ne
+legyen paraméterül átadva a konstruktornak. Az elkészítési idő a következő képlet
+szerint történjen: az összes feltétre a következők összege: a feltét nevének hossza
+szorozva a pizza átmérőjével (centiméterenként és feltétbetűnként egy másodperc).
+
+Pl.: 32 cm-es pizza "cheese" feltéttel: 32*6 = 192, amit kerekítsünk 4 percre.
+A konstruktor dobjon kivételt, ha valamely paraméter nem értelmezhető. Dobjon
+`TypeNotPresentException`-t, ha a feltét nincs benne a következő listában:
+`beef, cheese, corn, fish, ham, mushroom, salami, tomato`. Jelenítse meg a `throws`
+kulcsszóval, hogy a `Pizza` osztály példányosításakor le kell kezelni a
+`TypeNotPresentException`-t.
+
+Írjon `Main` programot, amelynek egy statikus metódusa beolvas a paraméterként
+átadott fájnévű fájlból pizzarendeléseket, és létrehozza egy listában az összes
+lehetséges pizzát, majd kiszámítja, hogy mennyi ideig kell aznap sütni. Kezelje le
+a kivételeket, amelyek felléphetnek a pizzák létrehozása során.
+
+Végül mutassa be ennek a `Main` osztálynak statikus metódusának használatát a
+`Main` osztályon belül.
+
+## 4. gyakorló feladat
+
+Készítsen egy `TelevisionShop` felsorolási típust. A felsorolási tagok legyenek
+`SAMSUNG, LG, SKYWORTH, SONY, SHARP`. A konstruktorukban az első tag legyen, hogy
+hány db készülék van az adott márkából raktáron, a második és a harmadik az elérhető
+átmérők minimuma és maximuma legyen. Készítsen hozzá olyan metódukokat, amelyekkel
+ki tudja íratni az összes lehetséges kapható méret minimumát és maximumát típustól
+függetlenül (statikus) és olyat, amely adott márkára kiírja, hogy mekkora méretű
+tévéket lehet kapni. Készítsen statikus metódust, amellyel kiírja a rendelkezésre
+álló készletről minden tudhatót!
+
+Használja a `final` kulcsszót, ahol lehet!
 
 
