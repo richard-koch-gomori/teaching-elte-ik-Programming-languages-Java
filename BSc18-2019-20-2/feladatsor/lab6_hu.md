@@ -2,7 +2,74 @@
 
 
 
+## útmutatás
+
+Terjedés követése: fordítási hiba javítva
+
+~~~{.java}
+import java.io.IOException;
+class TestTime {
+    public Time readTime( String fname ) throws IOException {
+        ... new java.io.FileReader(fname) ...
+    }
+
+    public static void main( String[] args ) throws IOException {
+        TestTime tt = new TestTime();
+        Time wakeUp = tt.readTime("wakeup.txt");
+        wakeUp.aMinutePassed();
+    }
+}
+~~~
+
+Kivételkezelés
+
+~~~{.java}
+import java.io.IOException;
+class TestTime {
+    public Time readTime( String fname ) throws IOException {
+        ... new java.io.FileReader(fname) ...
+    }
+    public static void main( String[] args ){
+        TestTime tt = new TestTime();
+        try {
+            Time wakeUp = tt.readTime("wakeup.txt");
+            wakeUp.aMinutePassed();
+        } catch( IOException e ){
+            System.err.println("Could not read wake-up time.");
+        }
+    }
+}
+~~~
+
+Kivételkezelés
+
+A program tovább futhat a probléma ellenére
+
+~~~{.java}
+public class Receptionist {
+    ...
+    public Time[] readWakeupTimes( String[] fnames ){
+        Time[] times = new Time[fnames.length];
+        for( int i = 0; i < fnames.length; ++i ){
+            try {
+                times[i] = readTime(fnames[i]);
+            } catch( java.io.IOException e ){
+                times[i] = null;   // no-op
+                System.err.println("Could not read " + fnames[i]);
+            }
+        }
+        return times; // maybe sort times before returning?
+    }
+}
+~~~
+
+<https://stackoverflow.com/questions/11589302/why-is-throws-exception-necessary-when-calling-a-function>  
+<https://stackoverflow.com/questions/2683958/why-is-nullpointerexception-not-declared-as-a-checked-exception>  
+<https://stackoverflow.com/questions/297303/printwriter-and-printstream-never-throw-ioexceptions>
+
 ### 1. feladat
+
+#### a
 
 Módosítsa a 3. gyakorlat 5. feladatát úgy, hogy egy `Point` objektumot paraméterek
 nélkül is lehessen konstruálni! Ekkor az `x` és `y` adattagja 0-ra inicializálódjon.
@@ -24,9 +91,8 @@ az előbb megírt `Circle` konstruktort.
 Írjon a `Circle` osztályhoz statikus `readFromFile()` metódust, amely betölti
 a paraméterben kapott fájlból egy kör adatait (`x` és `y` koordináta, sugár és címke
 újsorral elválasztva), megkonstruál ezen adatokkal egy `Circle` objektumot,
-majd visszatér az objektum referenciájával. Amennyiben a fájl feldolgozása
-hibába ütközik (nem lehet megnyitni a fájlt; érvénytelen adatok vannak a fájlban)
-akkor is jöjjön létre objektum csupa 0-szerű adatokkal.
+majd visszatér az objektum referenciájával. A függvény a fellépő kivételeket
+engedje tovább a hívóhoz.
 
 Írjon a `Circle` osztályhoz `saveToFile()` metódust, amely az aktuális `Circle` objektum
 adatait a paraméterként megadott fájlba menti. Amennyiben a fájlba írás kivételes
@@ -34,6 +100,55 @@ eseménybe ütközik, a függvény engedje tovább a kivételes eseményt a hív
 Gondoskodjon arról, hogy ha a kiírás menet közben ütközik kivételes eseménybe,
 akkor a már kiírt adatok ne vesszenek el (azaz a `PrintWriter`-t mindenképpen
 be kell zárni).
+
+#### b
+
+Készítse el az (a) megoldás egy olyan változatát, amelyben a `readFromFile()`
+metódus megpróbálja kezelni a fellépő kivételes eseményeket. Ha valamilyen kivételes
+esemény miatt nem sikerül a beolvasás, akkor jöjjön létre kör objektum csupa 0-szerű
+adatokkal.
+
+
+## útmutatás
+
+JavaDoc formátum:
+
+```
+/**
+* ...
+* ...
+*/
+```
+
+Hogyan kell kinézniük a Java dokumentációs megjegyzéseknek, ezen belül
+a blokkcímkéknek, szövegközi címkéknek (block tags, inline tags)?
+
+@param,@return,@throws etc. -blokkcímke
+
+{@code},{@link} -szövegközi címke
+
+
+numbers/Rational.java:
+
+~~~{.java}
+package numbers;
+
+
+public class Rational {
+    /**
+    *  Set {@code this} to {@code this} * {@code that}.
+    *  @param that Non-null reference to a rational number,
+    *              it will not be changed in the method.
+    *  @throws NullPointerException When {@code that} is null.
+    */
+    public void multiplyWith( Rational that ){
+        this.numerator *= that.numerator;
+        this.denominator *= that.denominator;
+    }
+}
+~~~
+
+HTML generálás: `javadoc Rational.java`
 
 ### 2. feladat
 
@@ -56,6 +171,23 @@ Készítsen az osztályhoz is dokumentációs megjegyzést. Tartalmazza az `@aut
 `@version`, `@since` tageket.
 
 A `javadoc` program segítségével generáljon HTML dokumentációt a Java programhoz.
+
+## útmutatás
+
+~~~{.java}
+public enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY
+}
+//...
+Day d1 = Daay.MONDAY ;
+Day d2 = Day.valueOf("MONDAY");
+~~~
+
+`values()` statikus metódus, mely visszaadja az összes enumértéket  
+`ordinal()` az adott `enum` érték az osztálydefinicióban való helyzetét adja meg
+
+<https://docs.oracle.com/javase/tutorial/java/javaOO/enum.html>
 
 ### 3. feladat
 
@@ -82,13 +214,8 @@ Készítsen saját `toString()` metódust, amely az adott `enum` elem által meg
 Próbálja ki az elkészített felsorolási típust és a hozzátartozó metódusokat egy
 `Main` osztályban.
 
-### 4. feladat
 
-Módosítsa a 4. gyakorlat 2. feladatát úgy, hogy a `centerOfMass()` függvény
-a `Point` referenciákat ne tömbben, hanem egy `LinkedList`-ben kapja meg.
-
-
-### 1. gyakorló feladat
+## 1. gyakorló feladat
 
 Készítsünk egy egyszerű `Color` felsorolt típust, mely a következő értékeket
 tárolhatja: `RED`, `GREEN`, `BLUE`.
@@ -118,14 +245,17 @@ soronként megadva, vesszővel elválasztva. Pl: ABC-123,RED,100
 
 Írjunk egy `Main` osztályt (a csomogokon kívül), amely a tesztprogramunkat
 fogja tartalmazni! A `Main` osztály `main()` metódusában olvassuk be az
-input fájl tartalmát, a létrehozott objektumokat pedig tároljuk el egy
-`ArrayList`-be.
+input fájl tartalmát, a létrehozott objektumok referenciáit pedig tároljuk
+el egy tömbben.
 
-### 2. gyakorló feladat
+## 2. gyakorló feladat
 
+Készítsen az 1. feladat forráskódjához JavaDoc dokumentációs megjegyzéseket.
+A kommentek tartalmazzanak információkat a metódusok paramétereiről és
+visszatérési értékeiről, a dobott kivételekről. Generáljon HTML fájlt a
+`JavaDoc` programmal.
 
-
-### 3. gyakorló feladat
+## 3. gyakorló feladat
 
 
 
