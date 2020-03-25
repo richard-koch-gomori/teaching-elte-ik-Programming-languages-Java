@@ -3,7 +3,9 @@ Idõpontok
 gyakorlat: szerdánként 12:15-13:45, Déli Tömb 00-410 (PC 1)
 konzultáció: igény esetén; email-ben/személyesen lehet egyeztetni konzultációt bármikorra
 
-Elõvizsga: 2020. március 4., 8:00-11:00 Lovarda
+elõvizsga: 2020. március 4., 8:00-11:00 Lovarda
+
+pót gyakorlat (gyak06-extra -ként fog szerepelni a GitHub repo-ban): március 30. hétfõ 9:00-10:00
 
 A zárthelyik a Lovardában, a Nyelvi laborban és az Adatbázis laborban lesznek.
 Gyülekezõ a Lovarda elõtt.
