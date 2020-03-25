@@ -15,7 +15,7 @@ class Main6
     {
         System.out.print("Enter a num: ");
         String input = System.console().readLine();
-        double d = Double.parseDouble(input);
+        double d = Double.parseDouble(input); // a parseDouble() NumberFormatException-t dob érvénytelen input esetén
 
         double res1 = calcSquareRoot(d);
         double res2 = 120 - 2*res1;
@@ -44,6 +44,9 @@ class Main6
 }
 
 /*
+JavaDoc-ból olvasható ki, egy függvény legfontosabb információi
+pl milyen kivételeket dobhat
+
 https://docs.oracle.com/javase/7/docs/api/java/lang/Double.html#parseDouble(java.lang.String)
 */
 

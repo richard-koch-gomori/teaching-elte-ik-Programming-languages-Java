@@ -26,8 +26,12 @@ class Main5
 
     public static void main(String[] args)
     {
-        foo();
+        foo(); // ha a main() sem kapja el, akkor a JVM fogja elkapni, és kiírja a stack trace-t
     }
 }
 
-// stack trace
+/*
+stack trace:
+ha egy kivétel miatt leáll a program, akkor a JVM listázza a keletkezett kivétel helyét
+és hozzá vezető hívási láncot
+*/

@@ -7,6 +7,7 @@ class Fel7
         {
             if (args.length != 3)
             {
+                // a konstruáláskor egy konkrét, informáló üzenetet megadhatunk
                 throw new IllegalArgumentException("Provide 3 arguments");
             }
             double a = Double.parseDouble(args[0]);
@@ -56,6 +57,7 @@ class Fel7
         }
         catch (NumberFormatException e)
         {
+            // getMessage()-vel tudjuk lekérdezni mi volt a konstruáláskor megadott üzenet
             System.out.println("Error: invalid format, " + e.getMessage());
         }
         catch (ArithmeticException e)

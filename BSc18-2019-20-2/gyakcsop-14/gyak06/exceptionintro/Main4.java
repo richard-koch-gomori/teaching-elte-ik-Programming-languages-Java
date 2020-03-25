@@ -6,12 +6,12 @@ class Main4
     {
         if (num < 0)
         {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(); // itt keletkezik a kivétel
         }
         return Math.sqrt(num);
     }
 
-    public static void foo()
+    public static void foo() // a foo() függvény nem kapja el, ekkor a foo() hívójához kerül
     {
         System.out.print("Enter a num: ");
         String input = System.console().readLine();
@@ -30,6 +30,7 @@ class Main4
         {
             foo();
         }
+        // a main() elkaphatja
         catch (IllegalArgumentException e)
         {
             System.out.println("Error: negative num!");

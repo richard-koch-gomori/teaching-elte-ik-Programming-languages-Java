@@ -25,8 +25,12 @@ class Main
             PrintWriter pw = new PrintWriter(out);
 
             String line;
+            // beolvassuk a fájl következő sorát, majd erre mutat line
+            // utána ellenőrizzük hogy a line nem-e null
+            // null esetén nincs több beolvasandó sor
             while ((line = br.readLine()) != null)
             {
+                // split: részsztringekre bontja a line-t
                 String[] parts = line.split(",");
 
                 int sum = 0;
@@ -37,6 +41,8 @@ class Main
                 pw.println(sum);
             }
 
+            // végül a fájlok bezárása
+            // a bezárás így még hagy némi kívánnivalót maga után, ld. következő gyakorlat
             br.close();
             pw.close();
         }
