@@ -269,7 +269,7 @@ legyen paraméterül átadva a konstruktornak. Az elkészítési idő a követke
 szerint történjen: az összes feltétre a következők összege: a feltét nevének hossza
 szorozva a pizza átmérőjével (centiméterenként és feltétbetűnként egy másodperc).
 
-Pl.: 32 cm-es pizza "cheese" feltéttel: 32*6 = 192, amit kerekítsünk 4 percre.
+Pl.: 32 cm-es pizza "cheese" feltéttel: `32*6 = 192`, amit kerekítsünk 4 percre.
 A konstruktor dobjon kivételt, ha valamely paraméter nem értelmezhető. Dobjon
 `TypeNotPresentException`-t, ha a feltét nincs benne a következő listában:
 `beef, cheese, corn, fish, ham, mushroom, salami, tomato`. Jelenítse meg a `throws`
