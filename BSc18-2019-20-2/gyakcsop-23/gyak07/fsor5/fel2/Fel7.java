@@ -11,6 +11,7 @@ class Fel7
                 System.out.println("Usage: Fel7 a m b");
                 throw new IllegalArgumentException();
             }
+
             double a = Double.parseDouble(args[0]);
             char m = args[1].charAt(0);
             double b = Double.parseDouble(args[2]);
@@ -56,6 +57,7 @@ class Fel7
                 }
             }
         }
+        // néhány fontosabb kivétel kezelése, általános jellegű hibaüzenet kiírása
         catch (NumberFormatException e)
         {
             System.out.println("Invalid number");

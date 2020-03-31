@@ -22,9 +22,12 @@ class Main
             PrintWriter pw = new PrintWriter(output);
 
             String line;
+            // beolvassuk a fájl következő sorát, majd erre mutat line
+            // utána ellenőrizzük hogy a line nem-e null
+            // null esetén nincs több beolvasandó sor
             while ((line = br.readLine()) != null)
             {
-                //System.out.println(line);
+                // split: részsztringekre bontja a line-t
                 String[] parts = line.split(",");
 
                 int sum = 0;
@@ -32,11 +35,12 @@ class Main
                 {
                     sum += Integer.parseInt(num);
                 }
-                //System.out.println(sum);
 
                 pw.println(sum);
             }
 
+            // végül a fájlok bezárása
+            // a bezárás így még hagy némi kívánnivalót maga után, ld. következő feladat
             br.close();
             pw.close();
         }

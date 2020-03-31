@@ -9,8 +9,11 @@ class Fel7
             if (args.length != 3)
             {
                 System.out.println("Usage: Fel7 a m b");
-                throw new IllegalArgumentException("Require 3 arguments");
+
+                // a kivétel konstruálásakor megadhatunk egy informáló üzenetet
+                throw new IllegalArgumentException("Require at least 3 arguments");
             }
+
             double a = Double.parseDouble(args[0]);
             char m = args[1].charAt(0);
             double b = Double.parseDouble(args[2]);
@@ -58,6 +61,7 @@ class Fel7
         }
         catch (NumberFormatException e)
         {
+            // az informáló üzenetet szerezhetjük meg a getMessage() metódussal
             System.out.println("Invalid number, " + e.getMessage());
         }
         catch (ArithmeticException e)

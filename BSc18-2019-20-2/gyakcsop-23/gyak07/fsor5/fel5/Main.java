@@ -11,9 +11,11 @@ class Main
         String sample = System.console().readLine();
 
         File input = new File(args[0]);
+        Scanner sc = null;
+
         try
         {
-            Scanner sc = new Scanner(input);
+            sc = new Scanner(input);
 
             int counter = 0;
             while (sc.hasNextLine())
@@ -27,11 +29,13 @@ class Main
             }
 
             System.out.println("counter = " + counter);
+            // sc.close(); // ha a vezérlés nem jut el idáig, nem biztos h bezárjuk sc-t
         }
         catch (FileNotFoundException e)
         {
             System.out.println("Unable to open file " + args[0]);
         }
+        // a finally{} blokkba írt kód mindenképpen végrehajtásra kerül, így biztos h bezárjuk sc-t
         finally
         {
             sc.close();

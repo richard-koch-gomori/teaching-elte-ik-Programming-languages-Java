@@ -21,7 +21,6 @@ class Main
             String line;
             while ((line = br.readLine()) != null)
             {
-                //System.out.println(line);
                 String[] parts = line.split(",");
 
                 int sum = 0;
