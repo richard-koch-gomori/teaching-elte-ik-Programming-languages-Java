@@ -10,7 +10,7 @@ class MathUtils
             result *= base;
         }
 
-        if (exp <= 0)
+        if (exp <= 0) // ez itt hibás -> mostmár fail-el az eddig megírt unit test
         {
             if (base == 0)
             {
