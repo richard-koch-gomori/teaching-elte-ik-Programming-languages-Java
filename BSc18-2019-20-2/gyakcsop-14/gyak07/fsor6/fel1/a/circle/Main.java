@@ -12,6 +12,8 @@ public class Main
 {
     public static void main(String[] args)
     {
+        // a felhasználó kódnak a readFromFile() esetében figyelnie kell, hogy milyen
+        // kivétel lép fel, és ezekre az eshetőségekre fel kell készülnie
         try
         {
             Circle c = Circle.readFromFile("in.txt");

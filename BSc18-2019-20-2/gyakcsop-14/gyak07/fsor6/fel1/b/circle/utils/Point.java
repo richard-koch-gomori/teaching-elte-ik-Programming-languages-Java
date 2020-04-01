@@ -14,9 +14,10 @@ public class Point
     public void setX(double x) { this.x = x; }
     public void setY(double y) { this.y = y; }
 
+    // paraméter nélküli konstruktor
     public Point()
     {
-        x = y = 0;
+        x = y = 0; // csak hangsúlyozás miatt írom ki; egyébként az adattagok automatikusan 0-szerű kezdőértéket kapnak
     }
 
     public Point(Point that)
@@ -54,4 +55,23 @@ public class Point
         return "(" + x + "," + y + ")";
     }
 }
+
+/*
+class Foo
+{
+    // ha nem adunk meg konstruktort, akkor a fordító készít helyettünk:
+    // public Foo() {} // paraméter nélküli, üres törzsű konstruktor
+
+    // ha viszont mi írunk bármilyen konstruktort, akkor a fordító már nem készít paraméter nélküli konstruktort
+    public Foo()
+    {
+        System.out.println(...)
+    }
+
+    public Foo(int x)
+    {
+        ...
+    }
+}
+*/
 
