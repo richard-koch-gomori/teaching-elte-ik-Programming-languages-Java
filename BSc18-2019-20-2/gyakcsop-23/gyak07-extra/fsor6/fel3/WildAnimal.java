@@ -48,3 +48,16 @@ public enum WildAnimal
         return sb.toString();
     }
 }
+
+/*
+https://stackoverflow.com/questions/28436543/how-to-make-objects-of-an-enum-in-java
+
+From stackoverflow:
+The constructor is called when the enum class (Deck) is loaded by the classloader
+and initialized. [[So the deck will be shuffled before any line of code can call any
+method of the Deck class.]]"
+
+https://stackoverflow.com/questions/14690771/when-is-an-enum-constructor-called
+*/
+
+
