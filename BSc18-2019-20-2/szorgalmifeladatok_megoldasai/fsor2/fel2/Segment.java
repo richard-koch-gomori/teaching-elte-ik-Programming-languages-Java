@@ -24,7 +24,7 @@ class Segment {
         return (y2 - y1)*(p.x - x2) - (p.y - y2)*(x2 - x1);
     }
 
-    double intersects( Segment that ){
+    boolean intersects( Segment that ){
         Line thisLine = this.line();
         Line thatLine = that.line();
         if( thisLine.isParallelWith( thatLine ) ){
