@@ -4,7 +4,16 @@
 
 ## útmutatás
 
-`SimpleTest.java` fájl fordítása és futtatás:
+`SimpleTest.java` fájl fordítása és futtatása:
+
+Windows:
+
+```
+javac -cp .;junit-4.12.jar;hamcrest-core-1.3.jar SimpleTest.java
+java -cp .;junit-4.12.jar;hamcrest-core-1.3.jar org.junit.runner.JUnitCore SimpleTest
+```
+
+Linux:
 
 ```
 javac -cp .:junit-4.12.jar:hamcrest-core-1.3.jar SimpleTest.java
