@@ -11,12 +11,19 @@ public class Book
     private final int price, id;
     private final Genre genre;
 
+    // a lastId osztályszintű (statikus) adattag, nem jön létre lastId adattag minden objektumban,
+    // hanem csak egyetlen példánya van (azaz osztályszintű)
+    // minden objektum növeli 1-gyel, így ha az újonnan konstruált objektum id-nek lastId-t választ
+    // akkor így minden objektumnak egyedi id-ja lesz
     private static int lastId = 0;
+
     public static void resetId() { lastId = 0; }
 
     public int getReservePrice() { return price; }
     public int getId() { return id; }
 
+    // privát konstruktor: a user code nem tudja példányosítani az osztályt new-val
+    // (nem tudja a new Book() konstruálást használni)
     private Book(String author, String title, Genre genre, int price)
     {
         this.author = author;
@@ -28,6 +35,9 @@ public class Book
         this.id = lastId++;
     }
 
+    // factory függvény
+    // egy statikus metódusra bízzuk hogy adatellenőrzéseket végezzen,
+    // és ha minden oké, megkonstruál egy Book példányt, majd visszatér annak referenciájával
     public static Book make(String author, String title, String genreStr, String priceStr)
     {
         try
@@ -45,11 +55,18 @@ public class Book
             for (int i = 0; i < title.length(); ++i)
             {
                 char ch = title.charAt(i);
+/*
                 if (Character.isLetter(ch) || Character.isDigit(ch) || Character.isWhitespace(ch))
                 {
                     // do nothing
                 }
                 else
+                {
+                    return null;
+                }
+*/
+
+                if (!Character.isLetter(ch) && !Character.isDigit(ch) && !Character.isWhitespace(ch))
                 {
                     return null;
                 }
