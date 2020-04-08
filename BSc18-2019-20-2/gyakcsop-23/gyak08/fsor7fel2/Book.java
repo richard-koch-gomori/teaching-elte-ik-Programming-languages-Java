@@ -47,7 +47,7 @@ public class Book
                 char ch = title.charAt(i);
                 if (Character.isLetter(ch) || Character.isDigit(ch) || Character.isWhitespace(ch))
                 {
-                    ++i;
+                    // do nothing
                 }
                 else
                 {
