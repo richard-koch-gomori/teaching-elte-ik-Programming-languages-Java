@@ -1,0 +1,8 @@
+
+
+
+class Foo
+{
+    int x;
+}
+
