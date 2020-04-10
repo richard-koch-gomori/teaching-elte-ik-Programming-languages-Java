@@ -130,7 +130,6 @@ Tesztelje le a verem implementációt (a tanult tesztkörnyezetben) a következ�
 - egy elemmel rendelkező verem nem üres,
 - üres veremből nem lehet elemet kivenni (teszteljük, hogy dobódik-e kivétel),
 - jól működik a `size()` metódus extremális értékeken (0,1),
-- több `pop()`/`push()` művelet láncolása is jól működik,
 - ha az utolsó elem is kikerül, a verem üres.
 
 ### 2. gyakorló feladat
