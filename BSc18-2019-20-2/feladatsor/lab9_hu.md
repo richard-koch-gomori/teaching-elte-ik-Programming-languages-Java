@@ -14,7 +14,7 @@ osztóit adja vissza egy lista adatszerkezetben.
 Készítsen egy `Book` osztályt, amellyel egy általános könyvet fogunk reprezentálni.
 A `Book`-nak van szerzője és címe (`String`), valamint oldalszáma (`int`). Készítsen
 `PrintedBook` és `EBook` osztályokat, amelyek a `Book` osztályból származnak. A könyv
-szerzőjéhez és nevéhez csak `Book` férhet hozzá, az oldalszámra a leszármazott osztályoknak
+szerzőjéhez és nevéhez csak `Book` férhet hozzá, az oldalszámhoz a leszármazott osztályoknak
 is hozzá kell férniük.
 
 A `Book`-nak legyen paraméter nélküli konstruktora, amely beállítja az adattagjait
