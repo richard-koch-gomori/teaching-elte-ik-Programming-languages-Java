@@ -24,8 +24,8 @@ adatokat. Amennyiben a szerző neve rövidebb mint `2`, illetve a cím rövidebb
 karakter, akkor dobjon `IllegalArgumentException`-t.
 
 A `Book` osztálynak legyen egy `getShortName()` metódusa, amely visszatér a könyv
-adatainak sztringben tárolt, rövidített változatával: a szerző nevének első 2, a cím első 4
-karakterével illetve az oldalszámmal.
+adatainak sztringben tárolt, rövidített változatával: a szerző nevének első `2`, a cím
+első `4` karakterével illetve az oldalszámmal.
 
 Írjon főprogramot, amelyben paraméterekkel illetve paraméter nélkül konstruál egy-egy
 `Book`-ot, majd írja ki a képernyőre a könyvek rövidített adatait (`getShortName()`).
@@ -46,7 +46,7 @@ A `PrintedBook` és `EBook` gyermekosztályoknak legyen `getPrice()` metódusa, 
 könyv árát számolja ki. Egy puhafedeles nyomtatott könyv ára az oldalszám `2`-szerese,
 egy keményfedeles nyomtatott könyv ára az oldalszám `3`-szorosa.
 
-Az `EBook` gyermekosztály tárolja egy `int` adattagban a PDF fájl méretét. Egy `EBook`
+Az `EBook` gyermekosztály tárolja egy `int` adattagban a PDF fájl méretét. Az `EBook`
 osztályt ne lehessen paraméterek nélkül konstruálni; a paraméteres konstruktor tárolja
 az elektronikus könyv adatait (szerző, cím, oldalszám, fájlméret). Egy `EBook` ára
 az oldalszám és a fájlméret összege.
@@ -84,7 +84,7 @@ Digitális könyv hivatkozási formája:
 "ősosztály toString()-je (PDF size: méret) [kezdőoldalszám-végoldalszám] referenced in article: cikknév"
 
 Digitális anyagok hivatkozásánál szokás feltüntetni a fájl elérési dátumát. Terhelje túl (overload)
-a `PrintedBook` osztály `createReference()` metódusát egy olyan metódussal, amely paraméterként
+az `EBook` osztály `createReference()` metódusát egy olyan metódussal, amely paraméterként
 cikknevet és dátumot (`String`) fogad, majd a következő hivatkozási szöveggel tér vissza:
 
 "ősosztály toString()-je (PDF size: méret) referenced in article: cikknév, accessing PDF date: dátum"
@@ -179,7 +179,7 @@ akkor a végéhez fűzi a paraméterként kapott `IntList`-ben található egés
 nem elég nagy elemek hozzáadásakor, akkor a metódusok dobjanak `IllegalStateException`-t.
 Írjon `toString()` metódust, amely vesszővel elválasztva felsorolja az `IntList` elemeit.
 Amennyiben az `IntList` üres, akkor a `toString()` az "empty" sztringet adja vissza.
-Írjon `removeGreaterThanItems()` metódust, amely paraméterként egy egész számot (`limit`)
+Írjon `removeItemsGreaterThan()` metódust, amely paraméterként egy egész számot (`limit`)
 fogad, és az `IntList` csak azon elemeit hagyja meg, amelyek nem nagyobbak `limit`-nél.
 
 #### b
