@@ -5,13 +5,6 @@ Az alábbi feladatleírásban azon nyelvi elemek (osztályok, metódusok stb.) l
 
 Megengedett a megnevezetteken kívül további metódusok, adattagok felvétele, ha szükséges; ezek legyenek rejtettek. Ha a feladatleírásban meg van adva egy nyelvi elem neve, kötelező azt használni, különben szabadon választható. Szabad választás esetén is betartandóak a Java nyelv konvenciói. A megadottakon kívül egyetlen osztály se tartalmazzon más publikus metódust vagy adattagot, illetve egyik csomag se tartalmazzon más osztályokat. A program ne írjon ki semmit, amire a feladat nem ad utasítást. Ha bármilyen kérdés, észrevétel felmerül, azt a felügyelőknek kell jelezni, *NEM* a diáktársaknak!
 
-A megoldás értékelése:
-
-Az elméleti és programozási feladatra 20-20 pont szerezhető.
-A gyakorlati jegy a következőképpen kerül meghatározásra:
-20 ponttól 2-es, 25 ponttól 3-as, 30 ponttól 4-es, 35 ponttól 5-ös.
-
-
 Használható segédanyagok:
 
 - A Canvas-ben, a Fájlok oldalon, pre_test/ könyvtár alatt található base.zip, amely tartalmazza
