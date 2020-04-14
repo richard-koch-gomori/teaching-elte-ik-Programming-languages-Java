@@ -76,8 +76,8 @@ miért LinkedList, és nem ArrayList?
 https://stackoverflow.com/questions/322715/when-to-use-linkedlist-over-arraylist-in-java
 
 megnézve a költségeket, általánosságban
-- a LinkedList gyors elemek hozzáadásakor, de lassú konkrét indexű elem kivételekor
-- az ArrayList lassú elemek hozzádásakor, de gyors konkrét indexű elem kivételekor
+- a LinkedList gyors elemek hozzáadásakor, de lassú konkrét indexű elem lekérdezésekor
+- az ArrayList lassú elemek hozzádásakor, de gyors konkrét indexű elem lekérdezésekor
 
 mit jelent h "O(1) amortized"?
 - a műveletet sokszor végrehajtva, átlagosan O(1) költségű
