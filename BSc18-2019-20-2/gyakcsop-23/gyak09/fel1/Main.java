@@ -79,11 +79,11 @@ megnézve a költségeket, általánosságban
 - a LinkedList gyors elemek hozzáadásakor, de lassú konkrét indexű elem lekérdezésekor
 - az ArrayList lassú elemek hozzádásakor, de gyors konkrét indexű elem lekérdezésekor
 
-mit jelent h "O(1) amortized"?
-- a műveletet sokszor végrehajtva, átlagosan O(1) költségű
-- klasszikus példa az ArrayList add()-ja: inicializáláskor vmilyen méretű tömb jön létre;
-  amikor egy add() híváskor ez betelik, új területet foglal, majd az összes korábbi
-  elemet másolni kell (ami O(n) költségű)
+klasszikus példa az ArrayList add()-ja: inicializáláskor vmilyen méretű tömb jön létre;
+amikor egy add() híváskor ez betelik, új területet foglal, majd az összes korábbi
+elemet másolni kell (ami O(n) költségű)
+
+-----------------------------------------------------------------------------------------
 
 ctrl c ctrl v stackoverflow:
 
