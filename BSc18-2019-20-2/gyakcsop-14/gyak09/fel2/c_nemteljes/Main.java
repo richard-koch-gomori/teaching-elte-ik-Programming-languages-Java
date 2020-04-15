@@ -1,7 +1,6 @@
 
 
 
-// alaposztály, ősosztály
 class Book
 {
     private String author, title;
@@ -30,6 +29,7 @@ class Book
         return author.substring(0, 2) + ": " + title.substring(0, 4) + ", pages: " + pages;
     }
 
+    // az ősosztály ezen toString()-jét nyilván örökli PrintedBook és EBook is
     public String toString()
     {
         return author + ": " + title + ", pages: " + pages;
@@ -43,7 +43,7 @@ enum CoverType
     Hardcover;
 }
 
-// leszármazott, gyermek
+
 class PrintedBook extends Book
 {
     private CoverType cover;
@@ -68,11 +68,13 @@ class PrintedBook extends Book
             return pages * 3;
     }
 
-    // felüldefiniálás, override
+    // a PrintedBook-nak az ősosztály toString()-je nem elég jó, ezért ugyanolyan néven
+    // és ugyanolyan paraméterezéssel definiál ilyen függvényt
+    // ezt hívják felüldefiniálásnak (override)
     public String toString()
     {
         if (cover == CoverType.Softcover)
-            return super.toString() + " (softcover)";
+            return super.toString() + " (softcover)"; // meghívhatja az ősosztály toString()-jét
         else
             return super.toString() + " (hardcover)";
     }

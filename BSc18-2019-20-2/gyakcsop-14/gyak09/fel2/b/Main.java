@@ -1,7 +1,6 @@
 
 
 
-// alaposztály, ősosztály
 class Book
 {
     private String author, title;
@@ -38,23 +37,29 @@ enum CoverType
     Hardcover;
 }
 
-// leszármazott, gyermek
+
+// a PrintedBook-nak ugyanúgy kell minden, ami Book-nak van, de bővíti kódját fedéltípussal (CoverType)
 class PrintedBook extends Book
 {
     private CoverType cover;
 
     public PrintedBook()
     {
+        // az ősosztály paraméter nélküli konstruktorának hívása
         super();
+
         this.pages += 6;
     }
 
     public PrintedBook(String author, String title, int pages, CoverType cover)
     {
+        // az ősosztály paraméteres konstruktorának hívása
         super(author, title, pages + 6);
+
         this.cover = cover;
     }
 
+    // a gyermekosztály egyéb metódusokat is definiál
     public int getPrice()
     {
         if (cover == CoverType.Softcover)
@@ -75,6 +80,7 @@ class EBook extends Book
         this.PDFSize = PDFSize;
     }
 
+    // a gyermekosztály egyéb metódusokat is definiál
     public int getPrice()
     {
         return pages + PDFSize;

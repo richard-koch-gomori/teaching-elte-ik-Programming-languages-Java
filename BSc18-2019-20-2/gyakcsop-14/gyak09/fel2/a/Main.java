@@ -1,13 +1,14 @@
 
 
-// öröklődés funkciója:
-// - kódöröklés
-// - ld. köv. gyakorlaton
+// öröklődés funkciói:
+// - kódöröklés: a leszármazott osztályban is szükség van korábban megírt adattagokra, metódusokra
+// - ld. köv. gyakorlat
 
+// alaposztály, ősosztály
 class Book
 {
     private String author, title;
-    protected int pages;
+    protected int pages; // Book és a Book-ból származó osztályok férhetnek hozzá
 
     public Book()
     {
@@ -33,7 +34,10 @@ class Book
     }
 }
 
-
+// leszármazmazott, gyermek
+// a konstruktorok nem öröklődnek
+// a privát adattagok és függvények öröklődnek, csak nem lehet rájük közvetlenül hivatkozni
+// (vmilyen setter-en/getter-en keresztül viszont elérhetőek)
 class PrintedBook extends Book
 {
 
@@ -56,6 +60,6 @@ class Main
         System.out.println("book2 = " + book2.getShortName());
 
         PrintedBook pbook1 = new PrintedBook();
-        System.out.println(pbook1.getShortName());
+        System.out.println(pbook1.getShortName()); // a leszármazott osztálynak is van getShortName()-je, örökölte Book-tól
     }
 }

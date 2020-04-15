@@ -2,8 +2,41 @@
 
 import java.util.LinkedList;
 
-// LinkedList<TÍPUS>
-// TÍPUS: generikus paraméter ami csak nem primitív típusú adat lehet
+
+/*
+hagyományos tömbök:
+inicializáláskor megadott méretnél nem lehet több elemük
+
+LinkedList<TÍPUS>
+TÍPUS-ú elemek láncolt listája
+
+LinkedList<String> object = new LinkedList<String>();
+object.add("A");
+object.add("B");
+object.add(2, "E");
+object.add("F");
+object.add("G");
+System.out.println("Linked list : " + object);
+
+TÍPUS: generikus paraméter: csak nem primitív típus lehet
+
+ha pl int v double kell, akkor a nekik megfelelő csomagoló osztályt kell használni: Integer v Double
+
+Primitive type	Wrapper class
+boolean	Boolean
+byte	Byte
+char	Character
+float	Float
+int	Integer
+long	Long
+short	Short
+double	Double
+
+Integer x = 12;
+
+autoboxing: a primitív típusok és a neki megfelelő csomagoló osztály közötti automatikus típuskonverzió
+https://docs.oracle.com/javase/tutorial/java/data/autoboxing.html
+*/
 
 class Main
 {

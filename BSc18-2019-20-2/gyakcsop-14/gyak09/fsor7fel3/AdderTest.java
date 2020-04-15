@@ -27,7 +27,7 @@ public class AdderTest
         assertEquals(5.5, Double.parseDouble(Adder.add("2.1", "3.4")), 0.01);
     }
 
-    // ez a TC fail-el
+    // ez a unit test fail-el, tehát az Adder kód pl a bináris összeadásra vonatkozó elvárásokat nem teljesíti
     @Test
     public void add_Binary()
     {
