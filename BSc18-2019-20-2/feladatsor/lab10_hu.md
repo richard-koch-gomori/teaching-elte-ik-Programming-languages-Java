@@ -24,7 +24,7 @@ public static void main(String[] args)
 
 Functions that use pointers or references to base classes must be able to use objects of derived classes without knowing it. (Stackoverflow)
 
-A szülő osztály példányának referenciája bármikor helyettesíthető a leszármazott osztály példányának referenciájával
+A szülő osztály példányának referenciája bármikor helyettesíthető a leszármazott osztály példányának referenciájával.
 
 ## változó statikus/dinamikus típusa
 
