@@ -46,9 +46,6 @@ System.out.println(book.toString()); // PrintedBook toString()-je
 ## equals() és hashCode()
 
 ~~~{.java}
-import java.util.HashSet;
-
-
 class Vector
 {
     double[] coords;
@@ -65,11 +62,16 @@ class Vector
         return "(" + this.coords[0] + "," + this.coords[1] + ")";
     }
 }
+~~~
 
+~~~{.java}
 class Main
 {
     public static void main(String[] args)
     {
+        System.out.println(new Vector(2, 3).equals(new Vector(2, 3)));
+        System.out.println(new Vector(2, 3).equals(new Vector(2, 2)));
+
         HashSet<Vector> exampleSet = new HashSet<Vector>();
         exampleSet.add(new Vector(0, 0));
         exampleSet.add(new Vector(3, -7));
@@ -93,7 +95,7 @@ class Main
 
 ### 1. feladat
 
-Írjon az előző példa `Vector` osztályához saját `equals()` és `hashCode()` metódusokat.
+Írjon az előző példa `Vector` osztályához saját `equals()` és `hashCode()` metódusokat. Készítsen unit test-eket az `equals()` és `hashCode()` metódusok "szerződésében" foglalt elvárások alapján.
 
 ### 2. feladat
 
@@ -112,7 +114,7 @@ Legyen a zsáknak egy `remove()` metódusa is egy elem kivételére. Csökkentse
 
 Készítsen főprogramot, amely a `Bag<T>` generikus típus felhasználásával beolvas egy olyan szöveges fájlt, amely soronként egy szót tartalmaz, majd a szavak előfordulási gyakoriságáról statisztikát készít.
 
-Input.txt:
+input.txt:
 
 ```
 hello
