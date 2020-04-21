@@ -38,9 +38,6 @@ System.out.println(book.toString()); // Book toString()-je
 book = new PrintedBook("author", "Printed: Title", 100, CoverType.Softcover);
 // book statikus típusa Book, dinamikus típusa PrintedBook
 System.out.println(book.toString()); // PrintedBook toString()-je
-
-//PrintedBook pbook3 = (PrintedBook)book1;
-//System.out.println(pbook3.toString());
 ~~~
 
 ## equals() és hashCode()
