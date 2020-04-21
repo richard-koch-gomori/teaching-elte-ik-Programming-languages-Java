@@ -142,7 +142,7 @@ extends
 
 ### 1. gyakorló feladat
 
-Készítsük el a `Circle` osztályt, mely tárolja egy kör középpontjának `x` és `y` koordinátáját és a sugarát (három lebegőpontos szám). A konstruktor fogadja és tárolja el ezeket a paramétereket. Legyen mindegyikhez egy lekérdező getter művelet. Definiáljuk felül a kör osztály `hashCode()` és `equals()` metódusát. Az `equals()` vizsgálja meg, hogy két kör egybevágó-e, azaz hogy a sugaruk egyenlő-e. A középpontot ne vegye figyelembe! (Figyelem: Ekkor a `hashCode()` sem szabad, hogy függjön a középpont koordinátáitól, mert akkor két egyenlő objektumra adhatna különböző értéket)
+Készítsük el a `Circle` osztályt, mely tárolja egy kör középpontjának `x` és `y` koordinátáját és a sugarát (három lebegőpontos szám). A konstruktor fogadja és tárolja el ezeket a paramétereket. Legyen mindegyikhez egy lekérdező getter művelet. Definiáljuk felül a kör osztály `hashCode()` és `equals()` metódusát. Az `equals()` vizsgálja meg, hogy két kör egybevágó-e, azaz hogy a sugaruk egyenlő-e. A középpontot ne vegye figyelembe! (Figyelem: Ekkor a `hashCode()` sem szabad, hogy függjön a középpont koordinátáitól, mert akkor két egyenlő objektumra adhatna különböző értéket). Készítsen unit test-eket az `equals()` és `hashCode()` metódusok "szerződésében" foglalt elvárások alapján.
 
 ### 2. gyakorló feladat
 
