@@ -21,6 +21,6 @@ dinamikus típus: bármikor megváltozhat, lényegében az az osztály, amelyre 
 
 C++-ban `virtual` kulcsszó, Java-ban minden metódus virtuális
 
-ha egy metódus virtuális, akkor a leszármazott osztályokban felüldefiniáható
+ha egy metódus virtuális, akkor a leszármazott osztályokban felüldefiniáható  
 ekkor futási időben dől el, hogy a metódus mely változatát kell meghívni (a dinamikus típus alapján)
 
