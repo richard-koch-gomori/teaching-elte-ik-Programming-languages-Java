@@ -98,7 +98,7 @@ public class Circle
             pw.println(radius);
             pw.println(label);
         }
-        // a try () zárójelében lefoglalt olvasó objektumok close() metódusa meghívódik
+        // a try () zárójelében lefoglalt erőforrások (resources) close() metódusa meghívódik
         // a try{} blokk végrehajtása után
     }
 }
