@@ -1,4 +1,4 @@
-
+// Készítette: Végh Barnabás
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
@@ -18,59 +18,70 @@ public class StackTest
         assertEquals(2, verem.pop());
         assertEquals(4, verem.pop());
     }
-	
+
     // teszt 2
     @Test
     public void test_uresTrue()
     {
         Stack verem = Stack.make(2);
-    
-		assertEquals(true, verem.isEmpty());
-	}
+
+        assertEquals(true, verem.isEmpty());
+    }
     // teszt 3
     @Test
     public void test_uresFalse()
     {
         Stack verem = Stack.make(2);
         verem.push(2);
-    
-		assertEquals(false, verem.isEmpty());
-	}
-	
+
+        assertEquals(false, verem.isEmpty());
+    }
+
     // teszt 4
     @Test(expected = NoSuchElementException.class)
     public void test_hibatDob()
     {
         Stack verem = Stack.make(2);
-		
-		verem.pop();
+
+        verem.pop();
     }
-	
+
     // teszt 5
     @Test
     public void test_sizeTeszt()
     {
         Stack verem = Stack.make(2);
-		
+
         verem.push(2);
-		assertEquals(1, verem.size());
-		
+        assertEquals(1, verem.size());
+
         verem.pop();
-		assertEquals(0, verem.size());
-	}
-	
+        assertEquals(0, verem.size());
+    }
+
     // teszt 6
     @Test
     public void test_uresKikeruleskor()
     {
         Stack verem = Stack.make(2);
-		
+
         verem.push(2);
         verem.push(3);
-		
+
         verem.pop();
         verem.pop();
-        
-		assertEquals(true, verem.isEmpty());
-	}
+
+        assertEquals(true, verem.isEmpty());
+    }
+
+    // teszt 7
+    @Test(expected = IllegalStateException.class)
+    public void test_full()
+    {
+        Stack verem = Stack.make(2);
+
+        verem.push(2);
+        verem.push(3);
+        verem.push(3);
+    }
 }
