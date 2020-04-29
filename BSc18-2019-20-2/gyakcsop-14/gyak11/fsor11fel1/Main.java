@@ -1,6 +1,6 @@
 
 
-// csak absztrakt osztálynak lehet absztrakt metódusa
+// absztrakt osztálynak lehet absztrakt metódusa
 abstract class Book
 {
     private String author, title;
