@@ -1,8 +1,11 @@
+
+// interface: absztrakt publikus metódus szignatúrákat tartalmaz
 interface Printable
 {
     void print();
 }
 
+// PrintablePoint megvalósítja az interface-t, kötelező implementálni az interface metódusait
 class PrintablePoint implements Printable
 {
     private int x, y;
@@ -84,11 +87,14 @@ class ReversablePoint implements Reversable
     @Override
     public void reverse()
     {
+        // visszaállítja az objektum belső állapotát
         x = last_x;
         y = last_y;
     }
 }
 
+// nagyon fontos különbség az absztrakt osztályokhoz képest:
+// egy osztály csak egy osztályból származhat le, de több interface-t is implementálhat
 class PrintableAndReversablePoint implements Reversable, Printable
 {
     private int x, y;
@@ -141,13 +147,16 @@ class PrintableAndReversablePoint implements PrintableAndReversable
 
 class Main
 {
+    // több osztály is implementálhatja ugyanazt az interface-t
+    // a foo() metódus olyan osztály objektumát várja, aki implementálja a Printable interface-t
     public static void foo(Printable obj)
     {
         // ...
-        obj.print();
+        obj.print(); // kihasználhatjuk, hogy obj "tudja a" Printable-t
     }
 
     /*
+    // olyan paraméter, ami több interface-t implementál
     public static void foo(PrintableAndReversable obj)
     {
         // ...

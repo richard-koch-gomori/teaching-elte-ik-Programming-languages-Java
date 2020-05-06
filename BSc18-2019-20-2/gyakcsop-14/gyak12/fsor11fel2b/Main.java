@@ -1,3 +1,5 @@
+
+// a közös kód kiemelése egy ősosztályba
 class Point
 {
     private int x, y;
@@ -24,6 +26,7 @@ interface Printable
     void print();
 }
 
+// leszármazás osztályból és interface megvalósítása
 class PrintablePoint extends Point implements Printable
 {
     public PrintablePoint(int x, int y)
@@ -66,6 +69,9 @@ class ReversablePoint extends Point implements Reversable
 
     public ReversablePoint(int x, int y)
     {
+        // egy konstruktor első utasítása (akár kiírjuk akár nem) mindig az ősosztály paraméter nélküli konstruktorát hívó super() hívás
+        // itt most explicit ki kell írni, mert az x,y adatokat az ősosztály konstruktorával tároljuk
+        // a gyakorlaton a hibaüzenet abból származott, hogy az ősosztálynak nincs paraméter nélküli konstruktora
         super(x, y);
         last_x = x;
         last_y = y;
@@ -73,7 +79,7 @@ class ReversablePoint extends Point implements Reversable
     public void setX(int x)
     {
         last_x = getX();
-        super.setX(x);
+        super.setX(x); // az ősosztály setX() metódusának hívása
     }
     public void setY(int y)
     {
