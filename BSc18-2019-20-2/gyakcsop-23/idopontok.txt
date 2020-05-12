@@ -7,6 +7,8 @@ elõvizsga: 2020. március 4., 8:00-11:00 Lovarda
 
 pót gyakorlat (gyak07-extra -ként fog szerepelni a GitHub repo-ban): április 1. szerda 10:00-11:30
 
+zh konzultáció: 2020. május 28. 13:00
+
 A zárthelyik a Lovardában, a Nyelvi laborban és az Adatbázis laborban lesznek.
 Gyülekezõ a Lovarda elõtt.
 
