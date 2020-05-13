@@ -70,9 +70,9 @@ public: mindenki
 Modifier    Class   Package Subclass    World
 
 public      Y       Y       Y           Y
-protected	Y	    Y	    Y	        N
-no modifier	Y	    Y	    N	        N
-private     Y	    N	    N	        N
+protected   Y       Y       Y           N
+no modifier Y       Y       N           N
+private     Y       N       N           N
 
 
 "Analizis" -> {20, 21, 22, ..., 129, 130}
