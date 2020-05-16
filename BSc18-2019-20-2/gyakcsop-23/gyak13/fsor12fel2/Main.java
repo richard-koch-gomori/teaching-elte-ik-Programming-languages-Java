@@ -116,3 +116,20 @@ class Main
     }
 }
 
+/*
+https://stackoverflow.com/questions/20639098/in-java-can-you-modify-a-list-while-iterating-through-it
+
+https://stackoverflow.com/questions/17687536/is-it-safe-to-change-a-hashmap-key-value-during-iteration
+
+Map<Long, Integer> map = new HashMap<Long, Integer>();
+for (Long key : map.keySet() ) {
+   int value = map.get(key);
+   value--;
+   map.put(key, value);
+}
+
+It is perfectly safe operation that you're doing since you're just changing value of an existing key in the Map.
+However if you are ever going to delete an entry from Map then remeber to use Iterator.
+*/
+
+
