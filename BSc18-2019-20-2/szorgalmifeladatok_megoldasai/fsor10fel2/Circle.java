@@ -1,5 +1,6 @@
 //Készítette: Lukács Dávid István
-public class Circle implements Shape{
+import java.util.Objects;
+public class Circle {
     private double x,y,r;
     public Circle(double _x,double _y, double _r)
     {
@@ -10,10 +11,13 @@ public class Circle implements Shape{
     public double getX(){return x;}
     public double getY(){return y;}
     public double getR(){return r;}
-    
-    @Override
-    public double getArea() {return Math.pow(r, 2)*Math.PI;}
 
-    @Override
-    public double getPerimeter() {return 2*r*Math.PI;}
+    public boolean equals(Circle that){
+        if(that==null)
+        {
+            return false;
+        }
+        return this.r == that.r;}
+        public int hashCode(){return Objects.hash(r);}
+
 }

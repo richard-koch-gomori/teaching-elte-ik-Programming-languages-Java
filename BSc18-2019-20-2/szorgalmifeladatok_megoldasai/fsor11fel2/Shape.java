@@ -1,6 +1,6 @@
-//Készítette: Korom Pál Gábor
-
-public interface Shape{
+//Készítette: Lukács Dávid István
+public interface Shape
+{
     public double getPerimeter();
     public double getArea();
 }

@@ -1,17 +1,11 @@
-//Készítette: Korom Pál Gábor
-
+//Készítette: Lukács Dávid István
 public class Square implements Shape{
-    private double sideLength;
+    private double a;
+
+    @Override
+    public double getPerimeter() {return 4*a;}
     
-    public Square(double sideLength){
-        this.sideLength = sideLength;
-    }
-    
-    public double getPerimeter(){
-        return 4 * sideLength;
-    }
-    
-    public double getArea(){
-        return sideLength * sideLength;
-    }
+    @Override
+    public double getArea() {return Math.pow(a,2);}
+
 }

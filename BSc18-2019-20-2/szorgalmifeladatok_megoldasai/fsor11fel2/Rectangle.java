@@ -1,19 +1,11 @@
-//Készítette: Korom Pál Gábor
-
+//Készítette: Lukács Dávid István
 public class Rectangle implements Shape{
-    private double sideLengthX;
-    private double sideLengthY;
+    private double a,b;
+
+    @Override
+    public double getPerimeter() {return 2*a + 2*b;}
     
-    public Rectangle(double sideLengthX, double sideLengthY){
-        this.sideLengthX = sideLengthX;
-        this.sideLengthY = sideLengthY;
-    }
-    
-    public double getPerimeter(){
-        return 2*(sideLengthX + sideLengthY);
-    }
-    
-    public double getArea(){
-        return sideLengthX * sideLengthY;
-    }
+    @Override
+    public double getArea() {return a*b;}
+
 }

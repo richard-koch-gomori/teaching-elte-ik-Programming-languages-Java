@@ -1,44 +1,63 @@
-//Készítette: Korom Pál Gábor
-
-import org.junit.Test;
+//Készítette: Lukács Dávid István
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.fail;
+import org.junit.Test;
 
-public class CircleTest{
-    
-    @Test(expected = NullPointerException.class)
-    public void Circle_exception(){
-        Circle c1 = null;
-        Circle c2 = new Circle(8,10,10);
-        
-        c1.equals(c2);
-    }
-    
+public class CircleTest
+{
     @Test
-    public void Circle_equals(){
-        Circle c1 = new Circle(1,2,10);
-        Circle c2 = new Circle(8,10,10);
-        Circle c3 = new Circle(3,4,20);
-        Circle c4 = null;
-        Circle c5 = new Circle(5,6,10);
-        
-        assertFalse( c1.equals(c4) );
-        assertTrue( c1.equals(c1) );
-        assertTrue( c1.equals(c2) );
-        assertTrue( c2.equals(c1) );        //Szimmetria: ha c1 = c2, akkor c2 = c1
-        assertTrue( c2.equals(c5) );
-        assertTrue( c1.equals(c5) );        //Tranzitivitás: ha c1 = c2 és c2 = c5, akkor c1 = c5
-        assertFalse( c1.equals(c3) );
+    public void isReflexive()
+    {
+        Circle test1= new Circle(5.3,4.5,20.6);
+        assertTrue(test1.equals(test1) && test1.hashCode()==test1.hashCode());
     }
-    
+
     @Test
-    public void Circle_hashCode(){
-        Circle c1 = new Circle(4,5,10);
-        Circle c2 = new Circle(8,10,10);
-        Circle c3 = new Circle(4,5,20);
-        
-        assertEquals( c1.hashCode(), c2.hashCode() );
-        assertFalse( c1.hashCode() == c3.hashCode() );
+    public void isTransitive()
+    {
+        Circle test1= new Circle(5,4,20);
+        Circle test2= new Circle(6,3,20);
+        Circle test3= new Circle(2,6,20);
+        assertTrue(test1.equals(test2));
+        assertTrue(test1.hashCode()==test2.hashCode());
+        assertTrue(test2.hashCode()==test3.hashCode());
+        assertTrue(test1.hashCode()==test3.hashCode());
+    }
+
+    @Test
+    public void isSymmetrical()
+    {
+        Circle test1= new Circle(5,4,20);
+        Circle test2= new Circle(6,3,20);
+        assertTrue(test1.equals(test2));
+        assertTrue(test1.hashCode()==test2.hashCode());
+        assertTrue(test2.hashCode()==test1.hashCode());
+    }
+
+    @Test
+    public void nullPtr()
+    {
+        Circle test1= new Circle(5,4,20);
+        Circle test2=null;
+        assertTrue(test1!=null);
+        assertTrue(test1.equals(null)==false);
+    }
+
+    @Test(expected= NullPointerException.class)
+    public void nullPtrThrows()
+    {
+        Circle test1= new Circle(5,4,20);
+        Circle test2=null;
+        assertTrue(!test2.equals(test1));
+    }
+
+    @Test
+    public void notEqual()
+    {
+        Circle test1= new Circle(5,4,20.3);
+        Circle test2= new Circle(6,3,20.7);
+        assertTrue(!test1.equals(test2));
+        assertTrue(test1.hashCode()!=test2.hashCode());
     }
 }

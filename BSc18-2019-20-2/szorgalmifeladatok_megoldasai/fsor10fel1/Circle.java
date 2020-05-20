@@ -1,40 +1,32 @@
-//Készítette: Korom Pál Gábor
+//Készítette: Lukács Dávid István
+import java.util.Objects;
+public class Circle {
+    private double x,y,r;
+    public Circle(double _x,double _y, double _r)
+    {
+        x=_x;
+        y=_y; 
+        r=_r;
+    }
+    public double getX(){return x;}
+    public double getY(){return y;}
+    public double getR(){return r;}
 
-public class Circle{
-    private double x;
-    private double y;
-    private double radius;
-    
-    public Circle(double x, double y, double radius){
-        this.x = x;
-        this.y = y;
-        this.radius = radius;
-    }
-    
-    public double getX(){
-        return x;
-    }
-    
-    public double getY(){
-        return y;
-    }
-    
-    public double getRadius(){
-        return radius;
-    }
-    
     @Override
-    public boolean equals(Object that){
-        if(that == null) return false;
-        if(this == that) return true;
-        if(that instanceof Circle){
-            Circle thatCircle = (Circle) that;
-            return this.radius == thatCircle.getRadius();
-        }else return false;
+    public boolean equals(Object that)
+    {
+        if(that==null)
+        {
+            return false;
+        }
+        if(that instanceof Circle)
+        {
+            Circle returnable = (Circle)that;
+            return this.r == returnable.r;
+        }
+        else return false;
+        
     }
-    
-    @Override
-    public int hashCode(){
-        return 21 * (int)radius;
-    }
+    public int hashCode(){return Objects.hash(r);}
+
 }
