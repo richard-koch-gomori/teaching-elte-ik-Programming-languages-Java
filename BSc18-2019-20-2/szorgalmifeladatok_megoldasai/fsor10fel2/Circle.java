@@ -11,13 +11,21 @@ public class Circle {
     public double getX(){return x;}
     public double getY(){return y;}
     public double getR(){return r;}
-
-    public boolean equals(Circle that){
+    
+    @Override
+    public boolean equals(Object that)
+    {
         if(that==null)
         {
             return false;
         }
-        return this.r == that.r;}
-        public int hashCode(){return Objects.hash(r);}
+        if(that instanceof Circle)
+        {
+            Circle returnable = (Circle)that;
+            return this.r == returnable.r;
+        }
+        else return false;
+     }
+     public int hashCode(){return Objects.hash(r);}
 
 }
