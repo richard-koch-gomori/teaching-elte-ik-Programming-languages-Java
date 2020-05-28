@@ -22,15 +22,51 @@ public class StrictStudyPlanner extends StudyPlanner
     }
 
     @Override
-    public boolean isStudied()
+    public boolean isStudied(String bookName, int page)
     {
-
+        HashSet<Integer> lineElems = bookToPages.get(bookName);
+        if (lineElems == null)
+        {
+            throw new StudyException("Book " + bookName + " is unknown");
+        }
+        int min = Collections.min(lineElems);
+        int max = Collections.max(lineElems);
+        return page >= min && page <= max;
     }
 
     @Override
-    public boolean isStudied()
+    public boolean isStudied(String bookName, int from, int to)
     {
-        
+        HashSet<Integer> lineElems = bookToPages.get(bookName);
+        if (lineElems == null)
+        {
+            throw new StudyException("Book " + bookName + " is unknown");
+        }
+        int min = Collections.min(lineElems);
+        int max = Collections.max(lineElems);
+        //return (from >= min && to <= max) || (from <= min && to >= min) || (from <= max && ti >= max);
+        return (from >= min && from <= max) || (to >= min && to <= max);
     }
 }
+
+
+
+/*
+
+        min                            max
+        _______________________________
+                ...........
+                from       to
+
+    from      to
+    ..........
+                                    from          to
+                                    ..............
+
+                                                 from       to
+                                                 ............
+
+
+from .. to
+*/
 
