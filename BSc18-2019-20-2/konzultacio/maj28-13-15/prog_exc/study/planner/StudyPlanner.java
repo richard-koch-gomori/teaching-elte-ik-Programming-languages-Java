@@ -65,4 +65,19 @@ public class StudyPlanner
     {
         return bookToPages.toString();
     }
+
+    public int getBookCount()
+    {
+        return bookToPages.size();
+    }
+
+    public int pageCountOf(String bookName) throws StudyException
+    {
+        HashSet<Integer> lineElems = bookToPages.get(bookName);
+        if (lineElems == null)
+        {
+            throw new StudyException("Book " + bookName + " is unknown");
+        }
+        return lineElems.size();
+    }
 }

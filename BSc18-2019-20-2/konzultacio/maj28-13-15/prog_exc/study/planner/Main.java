@@ -1,3 +1,5 @@
+// NEM szükséges a végleges megoldáshoz
+
 package study.planner;
 
 import java.io.File;
