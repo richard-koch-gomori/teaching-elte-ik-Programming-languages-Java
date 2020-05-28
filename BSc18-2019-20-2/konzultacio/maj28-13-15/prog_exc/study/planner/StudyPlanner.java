@@ -9,6 +9,7 @@ teljesen minősített név (fully qualified name)
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Objects;
 
 
 public class StudyPlanner
@@ -108,5 +109,30 @@ public class StudyPlanner
             }
         }
         return false;
+    }
+
+    @Override
+    public boolean equals(Object that)
+    {
+        if (that == null)
+        {
+            return false;
+        }
+        if (that == this)
+        {
+            return true;
+        }
+        if (that instanceof StudyPlanner)
+        {
+            StudyPlanner sp = (StudyPlanner)that;
+            return this.bookToPages.equals(sp.bookToPages);
+        }
+        else return false;
+    }
+
+    @Override
+    public int hashCode()
+    {
+        return Objects.hash(this.bookToPages);
     }
 }
