@@ -44,7 +44,7 @@ public class StrictStudyPlanner extends StudyPlanner
         }
         int min = Collections.min(lineElems);
         int max = Collections.max(lineElems);
-        return (from >= min && to <= max) || (from <= min && to >= min) || (from <= max && to >= max); // "elején belelóg, középen van, végén belelóg"
+        return (from >= min && to <= max) || (from <= min && to >= min) || (from <= max && to >= max); // "középen van, elején belelóg, végén belelóg"
         //return (from <= min && to >= max) || (from >= min && from <= max) || (to >= min && to <= max);
     }
 }
