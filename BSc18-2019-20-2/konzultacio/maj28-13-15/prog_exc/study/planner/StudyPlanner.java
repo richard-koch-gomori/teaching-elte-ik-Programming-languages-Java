@@ -80,4 +80,33 @@ public class StudyPlanner
         }
         return lineElems.size();
     }
+
+    public boolean isStudied(String bookName, int page) throws StudyException
+    {
+        HashSet<Integer> lineElems = bookToPages.get(bookName);
+        if (lineElems == null)
+        {
+            throw new StudyException("Book " + bookName + " is unknown");
+        }
+        return lineElems.contains(page);
+    }
+
+    public boolean isStudied(String bookName, int from, int to) throws StudyException
+    {
+        HashSet<Integer> lineElems = bookToPages.get(bookName);
+        if (lineElems == null)
+        {
+            throw new StudyException("Book " + bookName + " is unknown");
+        }
+
+        for (int i = from; i <= to; ++i)
+        {
+            //if (isStudied(bookName, i))
+            if (lineElems.contains(i))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }
