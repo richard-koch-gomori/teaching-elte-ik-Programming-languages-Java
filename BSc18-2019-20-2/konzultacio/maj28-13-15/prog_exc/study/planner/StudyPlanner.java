@@ -6,13 +6,14 @@ teljesen minősített név (fully qualified name)
 */
 
 // import java.util.*;
+import java.util.Set;
 import java.util.Scanner;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Objects;
 
 
-public class StudyPlanner
+public class StudyPlanner implements Comparable<StudyPlanner>
 {
     HashMap<String, HashSet<Integer>> bookToPages;
 
@@ -134,5 +135,57 @@ public class StudyPlanner
     public int hashCode()
     {
         return Objects.hash(this.bookToPages);
+    }
+
+    private int getAllPages() throws StudyException
+    {
+        int result = 0;
+        Set<String> keys = bookToPages.keySet();
+        for (String book : keys)
+        {
+            result += this.pageCountOf(book);
+        }
+        return result;
+    }
+
+    @Override
+    public int compareTo(StudyPlanner that) //throws StudyException
+    {
+        // this vs that
+
+        if (that == null)
+        {
+            throw new IllegalArgumentException();
+        }
+        if (that == this)
+        {
+            return 0;
+        }
+
+        int this_pages = 0;
+        int that_pages = 0;
+        try
+        {
+            this_pages = this.getAllPages();
+            that_pages = that.getAllPages();
+        }
+        catch (StudyException e)
+        {
+            throw new IllegalArgumentException();
+        }
+
+        /*
+        if (this_pages > that_pages)
+        {
+            return 1;
+        }
+        else if (this_pages == that_pages)
+        {
+            return 0;
+        }
+        else return -1;
+        */
+        //return Integer.compareTo(this_pages, that_pages);
+        return this_pages - that_pages;
     }
 }

@@ -308,6 +308,51 @@ public class StudyPlannerTest
         sp2.readPagesFromText(sc2);
 
         assertTrue(sp1.equals(sp2));
+        //assertEquals(sp1, sp2);
+    }
+
+    @Test
+    public void compareTo_StudyPlanner() throws StudyException
+    {
+        String text1 = 
+            "4" + 
+            System.lineSeparator() + 
+            "10 20 Programozasi Nyelvek Java" + 
+            System.lineSeparator() + 
+            "150 190 Analizis" + 
+            System.lineSeparator() + 
+            "20 130 Analizis" + 
+            System.lineSeparator() + 
+            "55 78 Programozasi Nyelvek Java";
+
+        Scanner sc1 = new Scanner(text1);
+        StudyPlanner sp1 = new StudyPlanner();
+        sp1.readPagesFromText(sc1);
+
+        String text2 = 
+            "7" + 
+            System.lineSeparator() + 
+            "67 78 Programozasi Nyelvek Java" + 
+            System.lineSeparator() + 
+            "10 20 Programozasi Nyelvek Java" + 
+            System.lineSeparator() + 
+            "150 190 Analizis" + 
+            System.lineSeparator() + 
+            "20 123 Analizis" +
+            System.lineSeparator() + 
+            "55 66 Programozasi Nyelvek Java" +
+            System.lineSeparator() + 
+            "124 130 Analizis" +
+            System.lineSeparator() + 
+            "200 300 Analizis";
+
+        Scanner sc2 = new Scanner(text2);
+        StudyPlanner sp2 = new StudyPlanner();
+        sp2.readPagesFromText(sc2);
+
+        assertTrue(0 > sp1.compareTo(sp2));
+        assertTrue(0 < sp2.compareTo(sp1));
+        assertTrue(0 == sp1.compareTo(sp1));
     }
 }
 
