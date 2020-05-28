@@ -149,10 +149,8 @@ public class StudyPlanner implements Comparable<StudyPlanner>
     }
 
     @Override
-    public int compareTo(StudyPlanner that) //throws StudyException
+    public int compareTo(StudyPlanner that)
     {
-        // this vs that
-
         if (that == null)
         {
             throw new IllegalArgumentException();
@@ -185,7 +183,9 @@ public class StudyPlanner implements Comparable<StudyPlanner>
         }
         else return -1;
         */
+
         //return Integer.compareTo(this_pages, that_pages);
+
         return this_pages - that_pages;
     }
 }

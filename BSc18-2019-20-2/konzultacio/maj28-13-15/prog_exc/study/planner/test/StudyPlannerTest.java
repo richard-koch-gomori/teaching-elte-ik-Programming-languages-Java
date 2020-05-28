@@ -308,7 +308,9 @@ public class StudyPlannerTest
         sp2.readPagesFromText(sc2);
 
         assertTrue(sp1.equals(sp2));
-        //assertEquals(sp1, sp2);
+
+        // az is jó h:
+        //assertEquals(sp1, sp2); // equals()-al hasonlít össze
     }
 
     @Test
