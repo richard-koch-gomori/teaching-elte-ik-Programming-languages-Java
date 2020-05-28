@@ -22,7 +22,7 @@ public class StrictStudyPlanner extends StudyPlanner
     }
 
     @Override
-    public boolean isStudied(String bookName, int page)
+    public boolean isStudied(String bookName, int page) throws StudyException
     {
         HashSet<Integer> lineElems = bookToPages.get(bookName);
         if (lineElems == null)
@@ -35,7 +35,7 @@ public class StrictStudyPlanner extends StudyPlanner
     }
 
     @Override
-    public boolean isStudied(String bookName, int from, int to)
+    public boolean isStudied(String bookName, int from, int to) throws StudyException
     {
         HashSet<Integer> lineElems = bookToPages.get(bookName);
         if (lineElems == null)
@@ -45,7 +45,7 @@ public class StrictStudyPlanner extends StudyPlanner
         int min = Collections.min(lineElems);
         int max = Collections.max(lineElems);
         //return (from >= min && to <= max) || (from <= min && to >= min) || (from <= max && ti >= max);
-        return (from >= min && from <= max) || (to >= min && to <= max);
+        return (from <= min && to >= max) || (from >= min && from <= max) || (to >= min && to <= max);
     }
 }
 
@@ -65,6 +65,9 @@ public class StrictStudyPlanner extends StudyPlanner
 
                                                  from       to
                                                  ............
+
+    from                                                    to
+    ........................................................
 
 
 from .. to

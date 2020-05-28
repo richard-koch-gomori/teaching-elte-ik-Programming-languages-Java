@@ -2,6 +2,7 @@ package study.planner.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
@@ -9,6 +10,7 @@ import org.junit.Test;
 import java.util.Scanner;
 
 import study.planner.StudyPlanner;
+import study.planner.StrictStudyPlanner;
 import study.planner.StudyException;
 
 
@@ -140,6 +142,132 @@ public class StudyPlannerTest
 
         sp.readPagesFromText(sc);
         sp.pageCountOf("missingBook");
+    }
+
+    @Test
+    public void isStudied1_StudyPlanner() throws StudyException
+    {
+        String text = 
+            "4" + 
+            System.lineSeparator() + 
+            "10 20 Programozasi Nyelvek Java" + 
+            System.lineSeparator() + 
+            "150 190 Analizis" + 
+            System.lineSeparator() + 
+            "20 130 Analizis" + 
+            System.lineSeparator() + 
+            "55 78 Programozasi Nyelvek Java";
+
+        Scanner sc = new Scanner(text);
+        StudyPlanner sp = new StudyPlanner();
+
+        sp.readPagesFromText(sc);
+        assertFalse(sp.isStudied("Analizis", 140));
+    }
+
+    @Test
+    public void isStudied1_StrictStudyPlanner() throws StudyException
+    {
+        String text = 
+            "4" + 
+            System.lineSeparator() + 
+            "10 20 Programozasi Nyelvek Java" + 
+            System.lineSeparator() + 
+            "150 190 Analizis" + 
+            System.lineSeparator() + 
+            "20 130 Analizis" + 
+            System.lineSeparator() + 
+            "55 78 Programozasi Nyelvek Java";
+
+        Scanner sc = new Scanner(text);
+        StudyPlanner sp = new StrictStudyPlanner();
+
+        sp.readPagesFromText(sc);
+        assertTrue(sp.isStudied("Analizis", 140));
+    }
+
+    @Test
+    public void isStudied2_StudyPlanner() throws StudyException
+    {
+        String text = 
+            "4" + 
+            System.lineSeparator() + 
+            "10 20 Programozasi Nyelvek Java" + 
+            System.lineSeparator() + 
+            "150 190 Analizis" + 
+            System.lineSeparator() + 
+            "20 130 Analizis" + 
+            System.lineSeparator() + 
+            "55 78 Programozasi Nyelvek Java";
+
+        Scanner sc = new Scanner(text);
+        StudyPlanner sp = new StudyPlanner();
+
+        sp.readPagesFromText(sc);
+        assertFalse(sp.isStudied("Analizis", 140, 145));
+    }
+
+    @Test
+    public void isStudied2_StrictStudyPlanner() throws StudyException
+    {
+        String text = 
+            "4" + 
+            System.lineSeparator() + 
+            "10 20 Programozasi Nyelvek Java" + 
+            System.lineSeparator() + 
+            "150 190 Analizis" + 
+            System.lineSeparator() + 
+            "20 130 Analizis" + 
+            System.lineSeparator() + 
+            "55 78 Programozasi Nyelvek Java";
+
+        Scanner sc = new Scanner(text);
+        StudyPlanner sp = new StrictStudyPlanner();
+
+        sp.readPagesFromText(sc);
+        assertTrue(sp.isStudied("Analizis", 140, 200));
+    }
+
+    @Test
+    public void pageCountOf_StrictStudyPlanner() throws StudyException
+    {
+        String text = 
+            "4" + 
+            System.lineSeparator() + 
+            "10 20 Programozasi Nyelvek Java" + 
+            System.lineSeparator() + 
+            "150 190 Analizis" + 
+            System.lineSeparator() + 
+            "20 130 Analizis" + 
+            System.lineSeparator() + 
+            "55 78 Programozasi Nyelvek Java";
+
+        Scanner sc = new Scanner(text);
+        StudyPlanner sp = new StrictStudyPlanner();
+
+        sp.readPagesFromText(sc);
+        assertEquals(171, sp.pageCountOf("Analizis"));
+    }
+
+    @Test
+    public void pageCountOf_StudyPlanner() throws StudyException
+    {
+        String text = 
+            "4" + 
+            System.lineSeparator() + 
+            "10 20 Programozasi Nyelvek Java" + 
+            System.lineSeparator() + 
+            "150 190 Analizis" + 
+            System.lineSeparator() + 
+            "20 130 Analizis" + 
+            System.lineSeparator() + 
+            "55 78 Programozasi Nyelvek Java";
+
+        Scanner sc = new Scanner(text);
+        StudyPlanner sp = new StudyPlanner();
+
+        sp.readPagesFromText(sc);
+        assertFalse(171 == sp.pageCountOf("Analizis"));
     }
 }
 
