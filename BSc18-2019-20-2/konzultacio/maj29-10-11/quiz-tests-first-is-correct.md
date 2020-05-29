@@ -18,8 +18,8 @@ abstract class Strange {
 }
 ~~~
 
-- Absztrakt osztályban nem lehet adattag.
 - Az absztrakt osztály nem példányosítható.
+- Absztrakt osztályban nem lehet adattag.
 - Absztrakt osztályban a metódusoknak absztraktnak kell lenniük.
 - Egy absztrakt osztályban lennie kell absztrakt metódusnak.
 
@@ -38,11 +38,11 @@ interface ReallyUseful extends Callable {}
 
 Melyik állítás igaz az alábbiak közül?
 
-`ReallyUseful` altípusa `Phone`-nak  
+`ReallyUseful` altípusa `Phone`-nak
 `Phone` altípusa `Device`-nak
 
-- Az első
 - A második
+- Az első
 - Mindkettő
 - Egyik sem
 
@@ -63,10 +63,10 @@ class Main {
 }
 ~~~
 
+- D
 - A
 - B
 - C
-- D
 
 ### 4. kérdés
 
@@ -124,9 +124,9 @@ public void store( Object value ){
 }
 ~~~
 
+- Igen, mert a paraméter dinamikus típusa a statikus típusnak altípusa.
 - Igen, mert a paraméter statikus típus a dinamikus típusnak altípusa.
 - Igen, mert a paraméter dinamikus típusa a statikus típusnak nem altípusa.
-- Igen, mert a paraméter dinamikus típusa a statikus típusnak altípusa.
 - Nem, mert a paraméter statikus típus a dinamikus típusnak nem altípusa.
 
 ### 7. kérdés
@@ -183,10 +183,10 @@ class Main {
 }
 ~~~
 
+- Rosszul készítettük el a programot, ezért kiiíródik, hogy "Rrrrrring!"
 - Nem íródik ki semmi.
 - Fordítási hiba: egy 2 hosszú tömbnek megpróbálunk egy három hosszút értékül adni.
 - Futási hiba: egy 2 hosszú tömbnek megpróbálunk egy három hosszút értékül adni.
-- Rosszul készítettük el a programot, ezért kiiíródik, hogy "Rrrrrring!"
 
 ### 9. kérdés
 
@@ -224,10 +224,10 @@ class Main {
 }
 ~~~
 
+- A `Main.name.value` értéke "Jerry" lesz.
 - Fordítási hiba a `Main` 4. sorában az értékadásra: a `name.value` immutable (`String` típusú), ezért nem adhatunk értéket neki.
 - Fordítási hiba a `Main` 4. sorában az értékadásra: a `name` `final`, ezért nem adhatunk értéket neki.
 - Futási hiba a `Main` 4. sorában az értékadásra: a `name.value` immutable (`String` típusú), ezért nem adhatunk értéket neki.
-- A `Main.name.value` értéke "Jerry" lesz.
 
 ### 11. kérdés
 

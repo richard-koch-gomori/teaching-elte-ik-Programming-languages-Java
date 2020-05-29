@@ -1,7 +1,7 @@
 package study.planner;
 
 // kivételek 2 típus:
-// - ellenőrzött: Exception-ből származik
+// - ellenőrzött: például Exception-ből származik (nem RuntimeException/Error-ból származik)
 // - nem ellenőrzött: RuntimeException/Error-ból származik
 
 

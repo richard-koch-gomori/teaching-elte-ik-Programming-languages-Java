@@ -19,7 +19,7 @@ abstract class Strange {
 ~~~
 
 - Absztrakt osztályban nem lehet adattag.
-- Az absztrakt osztály nem példányosítható.
+- [helyes] Az absztrakt osztály nem példányosítható.
 - Absztrakt osztályban a metódusoknak absztraktnak kell lenniük.
 - Egy absztrakt osztályban lennie kell absztrakt metódusnak.
 
@@ -38,11 +38,11 @@ interface ReallyUseful extends Callable {}
 
 Melyik állítás igaz az alábbiak közül?
 
-`ReallyUseful` altípusa `Phone`-nak  
+`ReallyUseful` altípusa `Phone`-nak
 `Phone` altípusa `Device`-nak
 
 - Az első
-- A második
+- [helyes] A második
 - Mindkettő
 - Egyik sem
 
@@ -66,7 +66,7 @@ class Main {
 - A
 - B
 - C
-- D
+- [helyes] D
 
 ### 4. kérdés
 
@@ -88,7 +88,7 @@ public class Pair {
 }
 ~~~
 
-- Lefordul, hamisat ír ki.
+- [helyes] Lefordul, hamisat ír ki.
 - Lefordul, igazat ír ki.
 - Nem fordul le, hibás felüldefiniálás.
 - Nem fordul le, kimaradt a `@Override` annotáció.
@@ -109,7 +109,7 @@ public class Time extends Date {
 }
 ~~~
 
-- Fordítási hiba: hibás konstruktor a `Time` osztályban.
+- [helyes] Fordítási hiba: hibás konstruktor a `Time` osztályban.
 - Fordítási hiba: nincs konstruktor a `Time` osztályban.
 - Futási hiba: nincs konstruktor a `Time` osztályban.
 - A létrejövő objektum `year` mezője `1970` lesz.
@@ -126,7 +126,7 @@ public void store( Object value ){
 
 - Igen, mert a paraméter statikus típus a dinamikus típusnak altípusa.
 - Igen, mert a paraméter dinamikus típusa a statikus típusnak nem altípusa.
-- Igen, mert a paraméter dinamikus típusa a statikus típusnak altípusa.
+- [helyes] Igen, mert a paraméter dinamikus típusa a statikus típusnak altípusa.
 - Nem, mert a paraméter statikus típus a dinamikus típusnak nem altípusa.
 
 ### 7. kérdés
@@ -148,7 +148,7 @@ class WeLoveThis {
 }
 ~~~
 
-- 0
+- [helyes] 0
 - 1
 - 2
 - 5
@@ -186,7 +186,7 @@ class Main {
 - Nem íródik ki semmi.
 - Fordítási hiba: egy 2 hosszú tömbnek megpróbálunk egy három hosszút értékül adni.
 - Futási hiba: egy 2 hosszú tömbnek megpróbálunk egy három hosszút értékül adni.
-- Rosszul készítettük el a programot, ezért kiiíródik, hogy "Rrrrrring!"
+- [helyes] Rosszul készítettük el a programot, ezért kiiíródik, hogy "Rrrrrring!"
 
 ### 9. kérdés
 
@@ -199,7 +199,7 @@ class Owen {
 }
 ~~~
 
-- Csak a `warm.Stove` osztályban.
+- [helyes] Csak a `warm.Stove` osztályban.
 - Csak a `cool.Fridge` osztályban.
 - Mindkettőben.
 - Egyikben sem.
@@ -227,7 +227,7 @@ class Main {
 - Fordítási hiba a `Main` 4. sorában az értékadásra: a `name.value` immutable (`String` típusú), ezért nem adhatunk értéket neki.
 - Fordítási hiba a `Main` 4. sorában az értékadásra: a `name` `final`, ezért nem adhatunk értéket neki.
 - Futási hiba a `Main` 4. sorában az értékadásra: a `name.value` immutable (`String` típusú), ezért nem adhatunk értéket neki.
-- A `Main.name.value` értéke "Jerry" lesz.
+- [helyes] A `Main.name.value` értéke "Jerry" lesz.
 
 ### 11. kérdés
 
