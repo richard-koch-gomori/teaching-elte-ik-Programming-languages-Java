@@ -70,3 +70,29 @@ public class StrictStudyPlanner extends StudyPlanner
     ........................................................
 */
 
+/*
+[min; max] és [from; to] zárt intervallumok között van-e átfedés
+
+Stackoverflow:
+
+https://stackoverflow.com/questions/3269434/whats-the-most-efficient-way-to-test-two-integer-ranges-for-overlap
+
+1. válasz: min <= to && from <= max
+
+2. válasz:
+
+Given two ranges [x1,x2], [y1,y2]
+
+def is_overlapping(x1,x2,y1,y2):
+    return max(x1,y1) <= min(x2,y2)
+
+max(min, from) <= min(max, to)
+
+---------------------------------------------------------------
+
+Kovács Réka megoldása:
+
+return (from <= min) ? (min <= to) : (from <= max);
+*/
+
+
