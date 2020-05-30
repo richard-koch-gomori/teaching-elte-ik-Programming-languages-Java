@@ -38,7 +38,7 @@ interface ReallyUseful extends Callable {}
 
 Melyik állítás igaz az alábbiak közül?
 
-`ReallyUseful` altípusa `Phone`-nak
+`ReallyUseful` altípusa `Phone`-nak  
 `Phone` altípusa `Device`-nak
 
 - Az első
