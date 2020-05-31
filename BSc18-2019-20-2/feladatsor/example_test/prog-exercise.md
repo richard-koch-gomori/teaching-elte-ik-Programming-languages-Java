@@ -60,7 +60,7 @@ Az osztályban egy metódus szerepel, `readPagesFromText`, amelynek a következ�
         - A feladott rész zárt intervallum: az első és az utolsó oldal is fel van adva.
     - A példában tehát a `Programozasi Nyelvek Java` könyv `10`, `11`, `...`, `20`, `55`, `56`, `...`, `78` oldalai vannak feladva, az `Analizis` könyvből pedig a `20`, `21`, `...`, `130`, `150`, `151`, `...`, `190` oldalak.
 - A `readPagesFromText` metódus kiolvassa `lineCount` értékét, majd feldolgozza a következő `lineCount` sort.
-    - Azt a sort, amelyik nem háromnál kevesebb részre bomlik a szóközök mentén, figyelmen kívül kell hagyni.
+    - Azt a sort, amelyik háromnál kevesebb részre bomlik a szóközök mentén, figyelmen kívül kell hagyni.
     - Egyébként feltételezhető, hogy minden adat helyes, nem kell további ellenőrzéseket végezni.
 - A megnevezett könyvhöz tartozó feladott oldalak halmazába kell betenni a sorban megadott zárt intervallum mindegyik számát.
     - Ha a halmaz még nem létezik, mert még nem szerepelt ilyen könyv, létre kell hozni.
