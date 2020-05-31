@@ -13,7 +13,7 @@ System.out.println(book.toString()); // PrintedBook toString()-je
 ~~~
 
 
-statikus típus: a változó deklarált típusa, ez egy változó esetén nem változhat meg
+statikus típus: a változó deklarált típusa, ez egy változó esetén nem változhat meg  
 dinamikus típus: bármikor megváltozhat, lényegében az az osztály, amelyre éppen mutat a referencia
 
 
