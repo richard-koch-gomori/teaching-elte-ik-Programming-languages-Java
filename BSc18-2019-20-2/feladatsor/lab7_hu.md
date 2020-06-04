@@ -93,6 +93,10 @@ Az `Adder` osztály `add()` osztályszintű metódusa két számot vár paramét
 módon el kell kódolni, majd az eredményt megfelelően dekódolni kell. Ha a karakterlánc
 nem értelmezhető számként, a program dobjon `IllegalArgumentException` kivételt.
 
+Az `Adder` osztály lefordított kódja itt érhető el:
+
+<resources/Adder.class>
+
 ```{.java}
 public class Adder {
     public static String add(String a, String b){...}

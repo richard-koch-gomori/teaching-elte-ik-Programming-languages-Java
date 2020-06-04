@@ -53,7 +53,7 @@ területét. Használjuk a `Math.PI` értéket!
 ### 5. feladat
 
 Készítse el a `Line` osztályt, mellyel egy adott sík egyeneseit
-reprezentálhatjuk. Egy egyenest az ![](img/lineardiof.png) összefüggés ír
+reprezentálhatjuk. Egy egyenest az ![](resources/img/lineardiof.png) összefüggés ír
 le, ahol `a`, `b` és `c` számok `double` típusúak. (Ezek lesznek
 az osztály adattagjai.)
 
@@ -124,13 +124,13 @@ van egymással, illetve negatív értéket, ha az óramutató járásával
 ellenkező irányú. Ez elég egyszerű: ha a `p` pont koordinátáit `x3` és
 `y3` jelöli, akkor a metódus az alábbi kifejezést adja vissza.
 
-![](img/orientation.png)
+![](resources/img/orientation.png)
 
 Készítsen egy `intersects(s)` metódust, mely visszaadja, hogy a
 szakasznak van-e közös pontja a paraméterként kapott `s` szakasszal!
 A megoldáshoz használja az alábbi segítséget!
 
-<http://www.dcs.gla.ac.uk/~pat/52233/slides/Geometry1x1.pdf>
+<resources/external/Geometry1x1.pdf>
 
 ### 3. gyakorló feladat
 
