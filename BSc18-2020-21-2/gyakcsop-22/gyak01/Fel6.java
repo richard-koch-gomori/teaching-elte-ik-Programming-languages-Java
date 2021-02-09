@@ -6,6 +6,8 @@ class Fel6
     {
         System.out.print("Enter min: ");
         String min_str = System.console().readLine();
+
+        // Integer.parseInt(str): az str sztringen egész számmá alakítja
         int min = Integer.parseInt(min_str);
         System.out.print("Enter max: ");
         String max_str = System.console().readLine();
