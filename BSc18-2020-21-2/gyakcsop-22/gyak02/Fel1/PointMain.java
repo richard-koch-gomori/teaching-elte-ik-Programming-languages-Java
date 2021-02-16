@@ -2,7 +2,6 @@
 /*
 primitív típus:
 - 8 típus: https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
-- stack-en tárolódik
 
 nem primitív típus:
 - MINDEN más
