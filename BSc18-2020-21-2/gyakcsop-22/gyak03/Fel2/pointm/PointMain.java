@@ -9,6 +9,7 @@ class PointMain
 {
     public static void main(String[] args)
     {
+        // teljesen minősített név használata
         point2d.Point p1;
 
         p1 = new point2d.Point();

@@ -1,8 +1,11 @@
 package point2d;
 
 
+// public class jelentése: a Point osztály látszódjon ki a point2d csomagból
+// (azaz a point2d csomagon kívüli felhasználók (csomagok, osztályok, user code) számára a Point osztály hozzáférhető)
 public class Point
 {
+    // public adattag és public metódus: mindenki számára elérhető
     public int x;
     public int y;
 
@@ -24,4 +27,5 @@ public class Point
     }
 };
 
-
+// a public kulcsszó nélkül a deklarált név csak abban a csomagban érhető el,
+// amelyikben deklarálták (package-private)

@@ -1,12 +1,13 @@
 package pointm;
 
+
+// a Point osztály elérése (a point2d csomagból)
+// teljesen minősített név (fully qualified name): csomagnév.osztálynév
+
+// ha nem akarjuk mindig kiírni, import-olhatjuk:
 import point2d.Point;
 
 
-// teljesen minősített név
-// fully qualified name:
-// csomagnév.osztálynév
-// pointm.PointMain
 class PointMain
 {
     public static void main(String[] args)

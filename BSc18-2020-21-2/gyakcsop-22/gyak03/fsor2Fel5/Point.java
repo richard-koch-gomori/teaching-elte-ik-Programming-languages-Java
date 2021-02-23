@@ -1,10 +1,6 @@
-package point2d;
+// fordítási egység: önállóan lefordítható forrásfájl
 
 
-// teljesen minősített név
-// fully qualified name:
-// csomagnév.osztálynév
-// point2d.Point
 class Point
 {
     int x;
@@ -27,5 +23,4 @@ class Point
         return Math.sqrt(Math.pow(x - p.x, 2) + Math.pow(y - p.y, 2));
     }
 };
-
 
