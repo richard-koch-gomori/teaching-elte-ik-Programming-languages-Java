@@ -138,7 +138,7 @@ public class Main {
 
 ### 2. gyakorló feladat
 
-Készítsünk egy `utils.Vector` osztályt (valós számokat tartalmazó tömb
+Készítsünk egy `utils.DoubleVector` osztályt (valós számokat tartalmazó tömb
 mint vektor segítségével). Az osztálynak egy konstruktora van, amely
 `double` tömböt fogad, és lemásolja annak tartalmát. Egy vektornak
 a következő műveletei vannak:
