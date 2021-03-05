@@ -6,6 +6,9 @@ package stringutils;
 public class IterLetter
 {
     private String str;
+
+    // felesleges; csak hangsúlyozom h a kezdőértéke 0
+    // az adattagok 0-szerű értékre inicializálódnak, akkor is ha nem írjuk ki
     private int idx = 0;
 
     public IterLetter(String init_str)
