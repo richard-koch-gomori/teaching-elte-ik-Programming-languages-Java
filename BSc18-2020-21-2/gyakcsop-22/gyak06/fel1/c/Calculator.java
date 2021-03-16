@@ -8,6 +8,7 @@ class Calculator
         {
             if (args.length != 3)
             {
+                // a kivétel konstruálásakor megadhatunk egy informáló üzenetet
                 throw new IllegalArgumentException("Usage: java Calculator num1 op num2");
             }
 
@@ -42,6 +43,7 @@ class Calculator
         }
         catch (NumberFormatException exc)
         {
+            // az informáló üzenetet szerezhetjük meg a getMessage() metódussal
             System.out.println("Invalid number format: " + exc.getMessage());
         }
         catch (IllegalArgumentException exc)

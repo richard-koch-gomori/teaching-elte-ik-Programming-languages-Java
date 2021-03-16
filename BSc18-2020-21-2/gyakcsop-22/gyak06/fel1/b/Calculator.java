@@ -40,6 +40,7 @@ class Calculator
                 throw new IllegalArgumentException();
             }
         }
+        // néhány fontosabb kivétel kezelése, általános jellegű hibaüzenet kiírása
         catch (NumberFormatException exc)
         {
             System.out.println("Invalid number format");
