@@ -37,6 +37,8 @@ class Main
                 pw.print(sum + System.lineSeparator());
                 //System.out.println(sum);
             }
+            //br.close();
+            //pw.close(); // ha a vezérlés nem jut el idáig, nem biztos h bezárjuk
         }
         catch (FileNotFoundException exc)
         {
@@ -46,6 +48,7 @@ class Main
         {
             System.out.println("IOException thrown");
         }
+        // a finally{} blokkba írt kód mindenképpen végrehajtásra kerül, így biztos h bezárjuk sc-t
         finally
         {
             try
