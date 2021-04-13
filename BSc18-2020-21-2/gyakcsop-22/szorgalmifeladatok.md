@@ -8,6 +8,7 @@
 5. feladatsor 4. feladat; határidő: 6. gyakorlat  
 6. feladatsor 1. gyakorló feladat; határidő: 7. gyakorlat  
 6. feladatsor 4. gyakorló feladat; határidő: 8. gyakorlat  
+7. feladatsor 1. gyakorló feladat; határidő: 9. gyakorlat  
 ~~~
 
 
