@@ -3,6 +3,7 @@
 ## gyakorlat
 
 keddenként, 16:00-17:30, MS Teams/Programozási nyelvek 2021 Gyakorlat (22)  
+a 10. gyakorlat idõpontja: ápr. 19 hétfõ 16:00-17:30  
 
 ## konzultáció
 
