@@ -1,10 +1,15 @@
-// Jónás Bendegúz Gergő megoldása
+// Jónás Bendegúz Gergő megoldása Koch-Gömöri Richárd kommentjeivel
 
+// öröklődés funkciói:
+// - kódöröklés: a leszármazott osztályban is szükség van korábban megírt adattagokra, metódusokra
+// - ld. 12. gyakorlat
+
+// alaposztály, ősosztály
 class Book 
 {
     private String title;
     private String author;
-    protected int pages;
+    protected int pages; // Book és a Book-ból származó osztályok férhetnek hozzá
 
     public Book()
     {
@@ -30,6 +35,7 @@ class Book
         return author.substring(0, 2) + ":" + title.substring(0, 4) + " " + pages;
     }
 
+    // az ősosztály ezen toString()-jét nyilván örökli PrintedBook és EBook is
     public String toString()
     {
         return author + ":" + title + ", " + pages; 
@@ -41,26 +47,36 @@ class Book
     }
 }
 
+// leszármazmazott, gyermek
+// a konstruktorok nem öröklődnek
+// a privát adattagok és függvények öröklődnek, csak nem lehet rájük közvetlenül hivatkozni
+// (vmilyen setter-en/getter-en keresztül viszont elérhetőek)
 class PrintedBook extends Book
 {
+    // a PrintedBook-nak ugyanúgy kell minden, ami Book-nak van, de bővíti kódját fedéltípussal (CoverType)
+
     enum CoverType {Softcover, Hardcover};
 
     private CoverType cover;
 
     public PrintedBook() 
     {
-        //super();
+        // az ősosztály paraméter nélküli konstruktorának hívása
+        super(); // ha nem írjuk ki, ideérti a fordító
         this.cover = CoverType.Hardcover;
         this.pages += 6; 
     }
 
     public PrintedBook(String author, String title, int pages, CoverType cover) 
     {
+        // az ősosztály paraméteres konstruktorának hívása
         super(author, title, pages);
+
         this.cover = CoverType.Hardcover;
         this.pages += 6; 
     }
 
+    // a gyermekosztály egyéb metódusokat is definiál
     public int getPrice() 
     {
         if(cover == CoverType.Hardcover) 
@@ -73,9 +89,12 @@ class PrintedBook extends Book
         }
     }
 
+    // a PrintedBook-nak az ősosztály toString()-je nem elég jó, ezért ugyanolyan néven
+    // és ugyanolyan paraméterezéssel definiál ilyen függvényt
+    // ezt hívják felüldefiniálásnak (override)
     public String toString() 
     {
-        return super.toString() + " " + cover;
+        return super.toString() + " " + cover; // meghívhatja az ősosztály toString()-jét
     }
 
     public String createRefernce(String article, int start, int end) 
@@ -93,17 +112,24 @@ class EBook extends Book
         this.pdfSize = pdfSize; 
     }
 
+    // a gyermekosztály egyéb metódusokat is definiál
     public int getPrice() 
     {
         return pages + pdfSize;
     }
 
+    // @Override annotáció: ha a metódus valójában nem is definiálja felül vmely ősoztálytól örökölt
+    // metódust, akkor fordítási hibát kapunk
+    // a programozó kifejezi ezzel a szándékát a compiler-nek
+    // ha a programozó elrontja a felüldefiniálást, a compiler-nek van lehetősége ezt észrevenni
     @Override
     public String createRefernce(String article, int start, int end) 
     {
         return super.toString() + " (pdf size: " + pdfSize + ") " + start + "-" + end + " referenced in article: " + article; 
     }
 
+    // overload
+    //@Override // ford. hiba, ez a metódus nem override, hanem overload
     public String createRefernce(String article, int start, int end, String date) 
     {
         return super.toString() + " (pdf size: " + pdfSize + ") " + start + "-" + end + " referenced in article: " + article + ", accessing PDF date: " + date; 
@@ -121,7 +147,7 @@ public class Main
         System.out.println("b2: " + b2.getShortName());
 
         PrintedBook p1 = new PrintedBook();
-        System.out.println("p1: " + p1.getShortName());
+        System.out.println("p1: " + p1.getShortName()); // a leszármazott osztálynak is van getShortName()-je, örökölte Book-tól
 
         PrintedBook p2 = new PrintedBook("ASD", "PStory of ASD", 420, PrintedBook.CoverType.Hardcover);
         System.out.println("p2: " + p2.getShortName());
