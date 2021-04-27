@@ -11,6 +11,7 @@
 7. feladatsor 1. gyakorló feladat; határidő: 9. gyakorlat  
 8. feladatsor 1. gyakorló feladat; határidő: 11. gyakorlat  
 8. feladatsor 2. gyakorló feladat; határidő: 11. gyakorlat  
+9. feladatsor 1. gyakorló feladat; határidő: 12. gyakorlat  
 ~~~
 
 
