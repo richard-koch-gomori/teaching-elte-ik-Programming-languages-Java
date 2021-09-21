@@ -174,5 +174,14 @@ legkisebb értéket a kapott téglalapok bal alsó csúcsának x-koordinátái k
 Vegyük észre, hogy a `Double.max(,)` és `Double.min(,)` függvényekkel kényelmese(bbe)n tudjuk megoldani
 a fenti feladatot, mint elágazásokkal és "?:"-kifejezésekkel!
 
+### 5. gyakorló feladat
+
+Készítsen `Rectangle` néven osztályt, amellyel egy téglalapot reprezentálunk.
+Két adattagja van, `a` és `b` `double` típusú oldalhosszúságok.
+Írjon metódusokat a téglalap területének és kerületének kiszámítására.
+
+Írjon főprogramot, amely beolvas a felhasználótól egy `a` és egy `b` oldalhosszúságot,
+majd a `Rectangle` metódusait használva kiírja a képernyőre a téglalap területét és kerületét.
+
 
 
