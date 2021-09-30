@@ -1,43 +1,42 @@
-/*
-String a = "svsgwalma_____"
-a.contains("alma") // true
-a.contains("körte") // false
-*/
+// Dobos Dávid megoldása
 
-
-import java.io.*;
-import java.util.Scanner;
+import java.io.File;
+import java.io.BufferedReader;
+import java.io.FileReader;
 
 
 class Main
 {
     public static void main(String[] args)
     {
-        System.out.print("Enter a sample: ");
-        String sample = System.console().readLine();
-
-        File input = new File(args[0]);
-
         try
         {
-            Scanner sc = new Scanner(input);
+            File file = new File(args[0]);
+            BufferedReader br = new BufferedReader( new FileReader( file ));
 
-            int counter = 0;
-            while (sc.hasNextLine())
+            int db = 0;
+            String szoveg;
+            System.out.print("A keresett szoveg: ");
+            szoveg = System.console().readLine();
+
+            String line;
+            while ((line = br.readLine()) != null)
             {
-                String line = sc.nextLine();
-
-                if (line.contains(sample))
+                if(line.contains(szoveg))
                 {
-                    ++counter;
+                    ++db;
                 }
             }
 
-            System.out.println("counter = " + counter);
-            sc.close();
+            br.close();
+
+            System.out.println("Az input " + db + " sorban tartalmazta a " + szoveg + " sztringet.");
         }
-        catch (Exception e)
+        catch(Exception e)
         {
+
         }
     }
 }
+
+
