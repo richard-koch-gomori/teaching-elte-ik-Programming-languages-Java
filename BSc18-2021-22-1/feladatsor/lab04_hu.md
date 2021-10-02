@@ -28,7 +28,7 @@ a területét, majd állítsuk be a középpontját (5, 2)-re, sugarát 10-re, m
 
 Módosítsuk az **a** megoldást úgy, hogy az adattagokhoz csak megfelelően megírt
 getter és setter metódus férhessen hozzá. A kör sugara nem lehet 0 vagy negatív szám,
-ilyenkor a setter metódus dobjon `IllegalArgumentException` kivételt.
+ilyenkor a program fejezze be a működését (lépjen ki, termináljon).
 
 #### c
 
