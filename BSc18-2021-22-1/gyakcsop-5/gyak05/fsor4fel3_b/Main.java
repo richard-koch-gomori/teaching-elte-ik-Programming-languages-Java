@@ -8,6 +8,7 @@ class Circle
     private double y = 0;
     private double radius = 1;
 
+    // setter metódus: adattag beállítást végzünk vele
     public void setX(double new_x)
     {
         x = new_x;
@@ -20,6 +21,7 @@ class Circle
 
     public void setRadius(double new_radius)
     {
+        // lehetőségünk van adat ellenőrzést végezni, mielőtt beállítjuk az adattagot
         if (new_radius <= 0)
         {
             System.out.println("radius must be pos");

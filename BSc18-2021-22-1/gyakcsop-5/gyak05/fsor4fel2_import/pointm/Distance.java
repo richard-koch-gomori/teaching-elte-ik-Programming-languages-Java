@@ -2,7 +2,7 @@
 
 package pointm;
 
-import point2d.Point; // elérhetővé teszi a point2d.Point -t Point néven
+import point2d.Point; // elérhetővé teszi a point2d.Point nevet Point néven
 import point2d.*; // minden nevet ami publikus point2d-ben "behúz"
 
 class Distance

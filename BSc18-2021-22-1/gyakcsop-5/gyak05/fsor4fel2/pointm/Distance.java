@@ -16,6 +16,7 @@ class Distance
             System.out.println(args[i + 2]);
             System.out.println(args[i + 3]);*/
 
+            // teljesen minősített név használata
             point2d.Point p = new point2d.Point();
             p.x = Double.parseDouble(args[i]);
             p.y = Double.parseDouble(args[i + 1]);
