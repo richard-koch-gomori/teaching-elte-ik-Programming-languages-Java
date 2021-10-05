@@ -2,7 +2,7 @@
 
 Fordítás: `javac circle/CircleMain.java`
 
-A `javac` az egyéb szükséges fájlokat is lefordítja, így a `Circle.java` és `Point.java` fájlok is lefordulnak.
+A `javac` az egyéb hivatkozott fájlokat is lefordítja, így a `Circle.java` és `Point.java` fájlok is lefordulnak.
 
 Futtatás: `java circle.CircleMain`
 
