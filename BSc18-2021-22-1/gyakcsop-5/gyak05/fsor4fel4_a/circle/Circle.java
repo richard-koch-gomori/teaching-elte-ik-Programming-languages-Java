@@ -1,6 +1,6 @@
 // Java nyelv konvenció (megszokásai):
 // csomagnevek: csupa kisbetűvel
-// osztálynevek kezdő nagybetűvel
+// osztálynevek: kezdő nagybetűvel
 
 package circle;
 
