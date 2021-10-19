@@ -20,7 +20,7 @@ public class Main
 
         //System.out.println(array[1].distance(array[0]));
 
-	Point.getCenter(array); // statikus metódus hívása
+        Point.getCenter(array); // statikus metódus hívása
         System.out.println("Tomegkozeppont = " + center);
     }
 }
