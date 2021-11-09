@@ -26,13 +26,7 @@ Bővítse a unit teszteket negatív kitevő helyességét ellenőrző esetekkel.
 
 A `Book` osztály egy árverési tételt (könyv) reprezentál.
 
-Tesztelje fehérdoboz-teszteléssel a `Book` osztályt! Törekedjen a következő
-metrikák maximalizálására:
-
-- metódusok lefedettsége 
-- elágazások lefedettsége (döntési pontok mindkét ága)
-- feltételek lefedettsége (részfeltételek a logikai kifejezésekben)
-- ciklusok lefedettsége (ciklusok, 0, 1, 2 fordulóra) 
+Tesztelje fehérdoboz-teszteléssel a `Book` osztályt!
 
 Az osztály rendelkezik egy beágyazott felsoroló osztállyal (`Book.Genre`),
 mely a lehetséges műfajokat tartalmazza, (azonos írásmóddal):
@@ -65,18 +59,6 @@ Ha a paraméterek nem megfelelőek, akkor a metódus `null`-t adjon vissza.
 legalább 2 hosszú, betűkből, számokból és szóközökből áll.
 - A kikiáltási ár akkor megfelelő, ha pozitív szám.
 - A műfaj akkor megfelelő, ha konvertálható egy megfelelő `enum` értékké.
-
-Írjon `isSameGenre()` osztályszintű metódust, amely a paraméterként kapott
-két `Book` objektumról eldönti, hogy ugyanolyan műfajú könyveket tárolnak-e.
-
-Írjon `compare()` néven metódust, amellyel a `Book` objektumot össze lehet
-hasonlítani egy másik, paraméterként kapott `Book` objektummal. A metódussal
-csak azonos műfajú könyveket lehet összehasonlítani; ha a két könyv műfaja
-nem egyezik meg, akkor a függvény dobjon `IllegalArgumentException` kivételt.
-Két azonos műfajú könyv közül az a nagyobb, amelyik kikiáltási ára nagyobb.
-Ha az aktuális könyv nagyobb a paraméterként kapottnál, `1` legyen a visszatérési
-érték; ellenkező esetben `-1`; ha a két könyv a megadott szempont szerint egyenlő,
-akkor pedig `0`.
 
 ### 3. feladat
 
