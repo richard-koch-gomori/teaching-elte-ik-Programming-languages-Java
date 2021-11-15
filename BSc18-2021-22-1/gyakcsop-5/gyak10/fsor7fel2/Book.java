@@ -56,6 +56,14 @@ public class Book
             return null;
         }
     }
+
+    public static Book make2(String author, String title, Genre g, int price)
+    {
+        if (author == null || title == null || title.length() < 2 || price <= 0)
+            throw new IllegalArgumentException();
+
+        return new Book(author, title, g, price);
+    }
 }
 
 
