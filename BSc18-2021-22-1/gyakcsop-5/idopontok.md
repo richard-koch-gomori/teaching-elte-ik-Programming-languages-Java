@@ -12,6 +12,10 @@ igény esetén; email-ben/személyesen lehet egyeztetni konzultációt bármikorra
 
 ## zárthelyi dolgozatok
 
-TODO
+- 2021. dec. 22. (Sz)
+- 2022. jan. 7. (P)
+- 2022. jan. 20. (Cs) (pótzh)
+
+16:00 elmélet, 17:00-20:00 gyakorlat
 
 
