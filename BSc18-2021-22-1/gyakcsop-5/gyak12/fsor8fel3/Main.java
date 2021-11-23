@@ -1,82 +1,39 @@
-
-import java.util.HashMap;
-import java.util.Set;
-
-// 2 típusa van
-// - ellenőrzött: Exception
-// - nem ellenőrzött: RuntimeException / Error
-
-class MyCustomException extends Exception
-{
-    public MyCustomException()
-    {
-    }
-
-    public MyCustomException(String errorMessage)
-    {
-        super(errorMessage);
-    }
-}
-
-class Foo<T>
-{
-    private T foo;
-
-    public Foo(T data)
-    {
-        foo = data;
-        System.out.println(foo);
-    }
-}
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
 
 class Main
 {
-    public static void foo(int i) throws MyCustomException
-    {
-        // ...
-        if (i < 0)
-        {
-            throw new MyCustomException("error");
-        }
-        // ...
-    }
-
     public static void main(String[] args)
     {
-        /*
-        HashMap<String, String> m = new HashMap<String, String>();
-        m.put("key1", "value1");
-        m.put("key2", "...");
-        m.put("Micimackó", "Makacka");
-        System.out.println(m.get("key1"));
-        System.out.println(m);
+/*
+        Bag<String> bag = new Bag<>();
+        bag.add("foo");
+        bag.add("foo");
+        bag.add("foo");
+        bag.add("foo2");
+        bag.add("foo3");
+        bag.add("idk");
+        bag.add("idk");
+        System.out.println(bag);
+*/
 
-        System.out.println("m.keySet = ");
-        for (String key : m.keySet())
+        File input = new File(args[0]);
+        Bag<String> statistics = new Bag<>();
+
+        try (Scanner sc = new Scanner(input))
         {
-            System.out.println(key);
+            while (sc.hasNextLine())
+            {
+                statistics.add(sc.nextLine());
+            }
+        }
+        catch (FileNotFoundException e)
+        {
+            System.out.println("Unable to access file: " + args[0]);
         }
 
-        Set<String> set = m.keySet();
-        m.put("alma", "alma2");
-        System.out.println("set = ");
-        for (String key : set)
-        {
-            System.out.println(key);
-        }
-
-
-        try
-        {
-            foo(-1);
-        }
-        catch (MyCustomException exc)
-        {
-            System.out.println(exc.getMessage());
-        }*/
-
-        Foo<Integer> foo = new Foo<>(45);
-        Foo<String> foo2 = new Foo<>("foo");
+        System.out.println("Word statistics: " + statistics);
     }
 }
 
