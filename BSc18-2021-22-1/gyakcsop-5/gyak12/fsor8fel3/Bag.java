@@ -3,7 +3,12 @@ import java.util.Map;
 
 public class Bag<T> {
 
-    private final Map<T, Integer> map = new HashMap<>();
+    private HashMap<T, Integer> map;
+    
+    public Bag()
+    {
+        map = new HashMap<>();
+    }
 
     public void add(T element) {
         int count = 1;

@@ -1,6 +1,6 @@
 // öröklődés funkciói:
 // - kódöröklés: a leszármazott osztályban is szükség van korábban megírt adattagokra, metódusokra
-// - később, ld. 13. gyakorlat
+// - később, ld. 12. gyakorlat
 
 
 // szülőosztály
