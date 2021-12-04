@@ -83,6 +83,8 @@ class Book implements Printable
     }
 }
 
+// nagyon fontos különbség az absztrakt osztályokhoz képest:
+// egy osztály csak egy osztályból származhat le, de több interface-t is implementálhat
 class PrintableAndReverseablePoint implements Printable, Reversable
 {
     private int x;
