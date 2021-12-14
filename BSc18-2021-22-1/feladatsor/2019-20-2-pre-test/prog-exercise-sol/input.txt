@@ -1,0 +1,5 @@
+4
+10 20 Programozasi Nyelvek Java
+150 190 Analizis
+20 130 Analizis
+55 78 Programozasi Nyelvek Java
