@@ -29,6 +29,36 @@ public class Equation implements Evaluable
     @Override
     public int eval(Sheet sheet) throws SheetException
     {
+        int operand1_int = Sheet.constructIntFromOperandStr(operand1, sheet);
+        int operand2_int = Sheet.constructIntFromOperandStr(operand2, sheet);
+
+        switch (operator)
+        {
+            case '+':
+            {
+                return operand1_int + operand2_int;
+            }
+            case '-':
+            {
+                if (operand1_int - operand2_int < 0)
+                {
+                    throw new ArithmeticException("sub error");
+                }
+                return operand1_int - operand2_int;
+            }
+            case '*':
+            {
+                return operand1_int * operand2_int;
+            }
+            case '/':
+            {
+                if (operand2_int == 0)
+                {
+                    throw new ArithmeticException("div error");
+                }
+                return operand1_int / operand2_int;
+            }
+        }
         return 0;
     }
 }
