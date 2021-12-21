@@ -2,7 +2,7 @@ package calc.util;
 
 public class CellName
 {
-    static final String colIndexes = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    public static final String colIndexes = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     public static boolean isCellNameValid(String cellName)
     {

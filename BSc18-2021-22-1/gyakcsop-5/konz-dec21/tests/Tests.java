@@ -6,6 +6,7 @@ import static org.junit.Assert.assertFalse;
 import org.junit.Test;
 
 import calc.util.*;
+import calc.*;
 
 public class Tests
 {
@@ -31,6 +32,31 @@ public class Tests
     {
         assertEquals(0, CellName.getColIndexFromCellName("A9"));
         assertEquals(1, CellName.getColIndexFromCellName("B11"));
+    }
+
+    @Test
+    public void test_Num() throws SheetException
+    {
+        Num n = new Num(10);
+        assertEquals(10, n.eval(null));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void test_Equation_whitespace()
+    {
+        new Equation("A0+ B0");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void test_Equation_lowcase()
+    {
+        new Equation("A0+b0");
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void test_Equation_invalid_ch()
+    {
+        new Equation("A0+_B0");
     }
 }
 
