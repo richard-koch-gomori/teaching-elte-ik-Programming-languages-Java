@@ -57,6 +57,8 @@ public class Server
             }
         }
         participants.put(new_idx, participant);
+        
+        // TODO: currentMaximumID-t itt nem kell növelni, ha volt üres hely
         ++currentMaximumID;
         return new_idx;
     }
@@ -69,6 +71,9 @@ public class Server
             throw new ServerException("removeParticipant(): Participant with ID: " + id + " is not present on the server.");
         }
         participants.remove(id, participant);
+        
+        // TODO: itt az if sose igaz, mert currentMaximumID mindig 1-gyel nagyobb mint a
+        // legnagyobb id, ezt kéne itt detektálni
         if (id == currentMaximumID)
         {
             for (int idx = currentMaximumID; idx >= 0; --idx)
